@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Aujungletimes</title>
+  <title>The Jungle Times</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<% if notice %>
+	  <p class="alert alert-success"><%= notice %></p>
+	<% end %>
+	<% if alert %>
+	  <p class="alert alert-danger"><%= alert %></p>
+	<% end %>
+
+	//authentication links at the top of the page. TODO: put them in the correct spot and possibly modify slightly
+	<div id="auth-links">
+		<% if user_signed_in? %>
+			<p>Logged in as <strong><%= current_user.first_name %></strong>
+			<%= link_to 'Edit profile', edit_user_registration_path, :class => 'link' %> | 
+			<%= link_to 'Logout', destroy_user_session_path, method: :delete, :class => 'link' %>
+		<% else %>
+			<%= link_to "Sign up", new_user_registration_path, :class => 'link'  %> |
+		  <%= link_to "Login", new_user_session_path, :class => 'link'  %>
+		<% end %>
+	</div>
 
 <%= yield %>
 
