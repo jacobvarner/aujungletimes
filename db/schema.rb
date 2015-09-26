@@ -11,7 +11,55 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150925225900) do
+ActiveRecord::Schema.define(version: 20150926055542) do
+
+  create_table "bootsy_image_galleries", force: :cascade do |t|
+    t.integer  "bootsy_resource_id"
+    t.string   "bootsy_resource_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "bootsy_images", force: :cascade do |t|
+    t.string   "image_file"
+    t.integer  "image_gallery_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "category_title"
+    t.boolean  "blog",           default: true
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.string   "username"
+    t.text     "body"
+    t.datetime "date_created"
+    t.datetime "date_edited"
+    t.integer  "post_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "post_title",                                         null: false
+    t.string   "post_author",                                        null: false
+    t.text     "post_description",        default: "No Description"
+    t.text     "post_content"
+    t.string   "category"
+    t.datetime "date_created"
+    t.datetime "date_edited"
+    t.boolean  "publish",                 default: false
+    t.datetime "created_at",                                         null: false
+    t.datetime "updated_at",                                         null: false
+    t.string   "post_image_file_name"
+    t.string   "post_image_content_type"
+    t.integer  "post_image_file_size"
+    t.datetime "post_image_updated_at"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",                    null: false
@@ -31,7 +79,7 @@ ActiveRecord::Schema.define(version: 20150925225900) do
     t.string   "last_name"
     t.string   "twitter"
     t.string   "permission",             default: "user"
-    t.datetime "join_date",              default: '2015-09-26 00:39:04'
+    t.datetime "join_date",              default: '2015-09-26 02:47:23'
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

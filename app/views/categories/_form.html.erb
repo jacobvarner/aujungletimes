@@ -1,0 +1,23 @@
+<%= form_for @cat do |f| %>
+	<% if @post.errors.any? %>
+		<div id="errors">
+			<h2><%= pluralize(@post.errors.count, "error") %> prevented this post from saving</h2>
+			<ul>
+				<% @post.errors.full_message.each do |msg| %>
+				<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+	<p>
+		<%= f.label :category_title %><br/>
+		<%= f.text_field :category_title %>
+	</p>
+	<p>
+		<%= f.label :blog %><br/>
+		<%= f.check_box :blog %>
+	</p>
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>

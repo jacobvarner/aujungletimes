@@ -1,7 +1,29 @@
 Rails.application.routes.draw do
+  mount Bootsy::Engine => '/bootsy', as: 'bootsy'
+  devise_for :users
+
   get 'home/index'
 
-  devise_for :users
+  # Reroute the default devise routes for authentication
+  devise_scope :user do
+    get '/login' => 'devise/sessions#new'
+  end
+
+  devise_scope :user do
+    get '/register' => 'devise/registrations#new'
+  end
+
+  devise_scope :user do
+    get '/logout' => 'devise/sessions#destroy'
+  end
+
+  resources :posts do
+    resources :comments
+  end
+  get '/blog' => 'posts#index'
+  get '/blog/new' => 'posts#new'
+
+
 
   root to: 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.
