@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150926055542) do
+ActiveRecord::Schema.define(version: 20150929214704) do
+
+  create_table "blogs", force: :cascade do |t|
+    t.string   "post_title",                                  null: false
+    t.string   "post_author",                                 null: false
+    t.text     "post_description", default: "No Description"
+    t.text     "post_content"
+    t.string   "post_image"
+    t.datetime "date_created"
+    t.datetime "date_edited"
+    t.string   "post_category"
+    t.boolean  "publish",          default: false
+    t.datetime "created_at",                                  null: false
+    t.datetime "updated_at",                                  null: false
+  end
 
   create_table "bootsy_image_galleries", force: :cascade do |t|
     t.integer  "bootsy_resource_id"

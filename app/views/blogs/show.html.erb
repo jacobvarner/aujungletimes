@@ -1,0 +1,11 @@
+<h1><%= @blog.post_title %></h1>
+<p>Published on <%= @blog.date_created %></p>
+<p><%= @blog.post_content %></p>
+<%= link_to 'Edit', edit_post_path(@blog) %>
+<%= link_to 'Delete', post_path(@blog), method: :delete, data: { confirm: 'Are you sure you wish to delete this post?'} %>
+<div>
+<h2><%= pluralize(@blog.comments.count, 'Comment') %></h2>
+<%= render @blog.comments %>
+<h3>Add a comment:</h3>
+<%= render 'comments/form' %>
+</div>
