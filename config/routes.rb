@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  mount Bootsy::Engine => '/bootsy', as: 'bootsy'
   devise_for :users
 
   get 'home/index'
@@ -17,15 +16,16 @@ Rails.application.routes.draw do
     get '/logout' => 'devise/sessions#destroy'
   end
 
-  resources :posts do
+  resources :blogs do
     resources :comments
   end
-  get '/blog' => 'posts#index'
-  get '/blog/new' => 'posts#new'
+  
+  get '/blog' => 'blogs#index'
+  get '/blog/new' => 'blogs#new'
 
 
 
-  root to: 'home#index'
+  root to: 'blogs#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

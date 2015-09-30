@@ -9,31 +9,31 @@
 			</ul>
 		</div>
 	<% end %>
-	<p>
+	<div>
 		<%= f.label :post_title %><br/>
 		<%= f.text_field :post_title %>
-	</p>
-	<p>
+	</div>
+	<div>
 		<%= f.label :post_description %><br/>
 		<%= f.text_area :post_description %>
-	</p>
-	<p>
+	</div>
+	<div>
 		<%= f.label :post_content %><br/>
 		<%= f.text_area :post_content %>
-	</p>
-	<p>
+	</div>
+	<div>
 		<%= f.label :category %><br/>
-		<%= f.collection_select :category, Category.order(:category_title), :category_title, include_blank: true %>
-	</p>
-	<p>
+		<%= f.collection_select :post_category, Category.order(:category_title), :category_title, include_blank: true %>
+	</div>
+	<div>
 		<%= f.label :post_image %>&nbsp;
 		<%= f.file_field :post_image %>
-	</p>
-	<p>
+	</div>
+	<div>
 		<%= f.label :publish %>&nbsp;
 		<%= f.check_box :publish %>
-	</p>
-	<p>
+	</div>
+	<div>
 		<%= f.submit %>
-	</p>
+	</div>
 <% end %>

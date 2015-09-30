@@ -9,7 +9,7 @@ class BlogsController < ApplicationController
 		if current_user.writer? || current_user.admin?
 			@blog = Blog.new
 		else
-			redirect_to blog_path
+			redirect_to blogs_path
 		end
 	end
 
@@ -17,7 +17,6 @@ class BlogsController < ApplicationController
 		if current_user.writer? || current_user.admin?
 			@blog = Blog.new(blog_params)
 			@blog.post_author = current_user.username
-			@blog.date_created = Time.now
 			
 			if @blog.save
 				redirect_to @blog
@@ -25,7 +24,7 @@ class BlogsController < ApplicationController
 				render 'new'
 			end
 		else
-			redirect_to blog_path
+			redirect_to blogs_path
 		end
 	end
 
@@ -37,7 +36,7 @@ class BlogsController < ApplicationController
 		if current_user.writer? || current_user.admin?
 			@blog = Blog.find(params[:id])
 		else
-			redirect_to blog_path
+			redirect_to blogs_path
 		end
 	end
 
@@ -51,7 +50,7 @@ class BlogsController < ApplicationController
 				render 'edit'
 			end
 		else
-			redirect_to blog_path
+			redirect_to blogs_path
 		end
 	end
 
@@ -60,9 +59,9 @@ class BlogsController < ApplicationController
 			@blog = Blog.find(params[:id])
 			@blog.destroy
 
-			redirect_to blog_path
+			redirect_to blogs_path
 		else
-			redirect_to blog_path
+			redirect_to blogs_path
 		end
 	end
 

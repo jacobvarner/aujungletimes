@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150929214704) do
+ActiveRecord::Schema.define(version: 20150930032631) do
 
   create_table "blogs", force: :cascade do |t|
     t.string   "post_title",                                  null: false
@@ -19,8 +19,6 @@ ActiveRecord::Schema.define(version: 20150929214704) do
     t.text     "post_description", default: "No Description"
     t.text     "post_content"
     t.string   "post_image"
-    t.datetime "date_created"
-    t.datetime "date_edited"
     t.string   "post_category"
     t.boolean  "publish",          default: false
     t.datetime "created_at",                                  null: false
@@ -51,29 +49,12 @@ ActiveRecord::Schema.define(version: 20150929214704) do
   create_table "comments", force: :cascade do |t|
     t.string   "username"
     t.text     "body"
-    t.datetime "date_created"
-    t.datetime "date_edited"
-    t.integer  "post_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.integer  "blog_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table "posts", force: :cascade do |t|
-    t.string   "post_title",                                         null: false
-    t.string   "post_author",                                        null: false
-    t.text     "post_description",        default: "No Description"
-    t.text     "post_content"
-    t.string   "category"
-    t.datetime "date_created"
-    t.datetime "date_edited"
-    t.boolean  "publish",                 default: false
-    t.datetime "created_at",                                         null: false
-    t.datetime "updated_at",                                         null: false
-    t.string   "post_image_file_name"
-    t.string   "post_image_content_type"
-    t.integer  "post_image_file_size"
-    t.datetime "post_image_updated_at"
-  end
+  add_index "comments", ["blog_id"], name: "index_comments_on_blog_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",                    null: false
@@ -93,7 +74,7 @@ ActiveRecord::Schema.define(version: 20150929214704) do
     t.string   "last_name"
     t.string   "twitter"
     t.string   "permission",             default: "user"
-    t.datetime "join_date",              default: '2015-09-26 02:47:23'
+    t.datetime "join_date",              default: '2015-09-30 03:33:58'
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

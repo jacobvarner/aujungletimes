@@ -7,8 +7,6 @@ class CreateBlogs < ActiveRecord::Migration
       t.text :post_description, default: "No Description"
       t.text :post_content
       t.string :post_image
-      t.datetime :date_created
-      t.datetime :date_edited
       t.string :post_category
       t.boolean :publish, default: false
 

@@ -1,6 +1,7 @@
-<%= form_for([@post, @post.comments.build]) do |f| %>
+<%= form_for([@blog, @blog.comments.build]) do |f| %>
+
 <p>
-	<%= f.label :body %><br/>
+	<%= f.hidden_field :username, :value => current_user.username %>
 	<%= f.text_area :body %>
 </p>
 <p>

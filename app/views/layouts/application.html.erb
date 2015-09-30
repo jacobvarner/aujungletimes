@@ -13,6 +13,14 @@
 	<% if alert %>
 	  <p class="alert alert-danger"><%= alert %></p>
 	<% end %>
+	<h1>The Jungle Times</h1>
+	<% if user_signed_in? && (current_user.admin? || current_user.writer?)%>
+		<p>Signed in as <strong><%= current_user.username %></strong> | <%= link_to 'Logout', destroy_user_session_path, :method => :delete %> | <%= link_to 'Edit Profile', edit_user_registration_path %> | <%= link_to 'Posts', blogs_path %> | <%= link_to 'New Post', new_blog_path %></p>
+	<% elsif user_signed_in? %>
+		<p>Signed in as <strong><%= current_user.username %></strong> | <%= link_to 'Logout', destroy_user_session_path, :method => :delete %> | <%= link_to 'Edit Profile', edit_user_registration_path %></p>
+	<% else %>
+		<%= link_to 'Sign In', new_user_session_path %> | <%= link_to 'Sign Up', new_user_registration_path %>
+	<% end %>
 
 <%= yield %>
 

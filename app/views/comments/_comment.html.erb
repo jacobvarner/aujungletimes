@@ -1,8 +1,9 @@
 <div>
 	<div>
-		<p><strong><%= comment.username %></strong></p>
 		<p><%= comment.body %></p>
-		<p><%= time_ago_in_words(comment.created_at) %> Ago</p>
+		<p><%= time_ago_in_words(comment.created_at) %> ago by <strong><%= comment.username %></strong></p>
 	</div>
-	<%= link_to 'Delete comment', [comment.post, comment], method: :delete, data: { confirm: 'Are you sure?' } %>
+	<% if user_signed_in? && (current_user.admin? || current_user.username == comment.username) %>
+		<p><%= link_to 'Delete', [comment.blog, comment], method: :delete, data: { confirm: 'Are you sure?' } %></p>
+	<% end %>
 </div>
