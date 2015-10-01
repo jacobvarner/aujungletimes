@@ -2,7 +2,8 @@
 <html>
 <head>
   <title>The Jungle Times</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -13,9 +14,9 @@
 	<% if alert %>
 	  <p class="alert alert-danger"><%= alert %></p>
 	<% end %>
-	<h1>The Jungle Times</h1>
+	<h1><%= link_to 'The Jungle Times', posts_path %></h1>
 	<% if user_signed_in? && (current_user.admin? || current_user.writer?)%>
-		<p>Signed in as <strong><%= current_user.username %></strong> | <%= link_to 'Logout', destroy_user_session_path, :method => :delete %> | <%= link_to 'Edit Profile', edit_user_registration_path %> | <%= link_to 'Posts', blogs_path %> | <%= link_to 'New Post', new_blog_path %></p>
+		<p>Signed in as <strong><%= current_user.username %></strong> | <%= link_to 'Logout', destroy_user_session_path, :method => :delete %> | <%= link_to 'Edit Profile', edit_user_registration_path %> | <%= link_to 'Posts', posts_path %> | <%= link_to 'New Post', new_post_path %></p>
 	<% elsif user_signed_in? %>
 		<p>Signed in as <strong><%= current_user.username %></strong> | <%= link_to 'Logout', destroy_user_session_path, :method => :delete %> | <%= link_to 'Edit Profile', edit_user_registration_path %></p>
 	<% else %>

@@ -16,16 +16,11 @@ Rails.application.routes.draw do
     get '/logout' => 'devise/sessions#destroy'
   end
 
-  resources :blogs do
+  resources :posts do
     resources :comments
   end
-  
-  get '/blog' => 'blogs#index'
-  get '/blog/new' => 'blogs#new'
 
-
-
-  root to: 'blogs#index'
+  root to: 'posts#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -43,7 +43,4 @@ Rails.application.configure do
 
   # Needed for Paperclip setup
   Paperclip.options[:command_path] = "/usr/bin/"
-
-  # wysiHat-engine setup
-  config.gem 'wysihat-engine', :source => 'http://gemcutter.org'
 end

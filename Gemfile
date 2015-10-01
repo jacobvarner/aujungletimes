@@ -26,13 +26,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Devise for authentication
 gem 'devise'
 
-# Use bootsy for content editing
-gem 'bootsy'
-gem 'wysihat-engine'
-gem 'bootstrap-sass', '~> 3.3.5.1'
+# Use will_paginate for pagination
+gem 'will_paginate'
 
-# User Paperclip for image and file uploading 
+# Use Paperclip for image and file uploading 
 gem 'paperclip', '~> 4.3' 
+
+# Use FriendlyId for URL SEO
+gem 'friendly_id'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
