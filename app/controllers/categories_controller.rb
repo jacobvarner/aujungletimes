@@ -1,19 +1,28 @@
 class CategoriesController < ApplicationController
+
 	def index
-		@cats = Category.all.order('category_title')
+		@cats = Category.all.order('category_title ASC')
 	end
 
 	def new
-		@cat = Category.new
+		if current_user.admin?
+			@cat = Category.new
+		else
+			redirect_to posts_path
+		end
 	end
 
 	def create
-		@cat = Category.new(category_params)
-		
-		if @cat.save
-			redirect_to @cat
+		if current_user.admin?
+			@cat = Category.new(category_params)
+			
+			if @cat.save
+				redirect_to categories_path
+			else
+				render 'new'
+			end
 		else
-			render 'new'
+			redirect_to posts_path
 		end
 	end
 
@@ -22,23 +31,31 @@ class CategoriesController < ApplicationController
 	end
 
 	def edit
-		@cat = Category.find(params[:id])
+		if current_user.admin?
+			@cat = Category.find(params[:id])
+		else
+			redirect_to posts_path
+		end
 	end
 
 	def update
 		@cat = Category.find(params[:id])
 		if @cat.update(params[:category].permit(:category_title, :blog))
-			redirect_to @cat
+			redirect_to categories_path
 		else
 			render 'edit'
 		end
 	end
 
 	def destroy
-		@cat = Category.find(params[:id])
-		@cat.destroy
+		if current_user.writer? || current_user.admin?
+			@cat = Category.find(params[:id])
+			@cat.destroy
 
-		redirect_to category_path
+			redirect_to categories_path
+		else
+			redirect_to categories_path
+		end
 	end
 
 	private

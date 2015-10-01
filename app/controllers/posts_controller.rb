@@ -58,15 +58,15 @@ class PostsController < ApplicationController
 			@post = Post.friendly.find(params[:id])
 			@post.destroy
 
-			redirect_to posts_path
+			redirect_to :back
 		else
 			redirect_to posts_path
 		end
 	end
 
 	def panel
-		if (current_user.admin? || current_user.writer?)
-			@post = Post.all.order('created_at DESC')
+		if current_user.admin? || current_user.writer?
+			@posts = Post.paginate(:page => params[:page], per_page: 25).order('created_at DESC')
 		else
 			redirect_to posts_path
 		end

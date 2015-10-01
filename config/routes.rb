@@ -20,6 +20,14 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  get '/panel' => 'posts#panel', :as => 'panel'
+
+  get '/categories' => 'categories#index', :as => 'categories'
+  get '/categories' => 'categories#index'
+  get '/categories/new' => 'categories#new', :as => 'new_category'
+  delete '/categories/:id' => 'categories#destroy', :as => 'destroy_category'
+  post '/categories' => 'categories#create'
+
   root to: 'posts#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

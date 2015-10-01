@@ -1,3 +1,5 @@
+<% @title = @post.post_title %>
+<meta name="description" content="<%= @post.post_description %>">
 <h2><%= @post.post_title %></h2>
 <!-- Post author, date, and category (if it has one) -->
 <div><p><i class="material-icons">account_circle</i>&nbsp;<strong><%= @post.post_author %></strong></p></div>
@@ -18,7 +20,6 @@
 <!-- if the post belongs to the current user or the current user is an admin, allow for the post to be edited or deleted. -->
 <% if user_signed_in? && (current_user.username == @post.post_author || current_user.admin?) %>
 	<%= link_to 'Edit', edit_post_path(@post) %>
-	<%= link_to 'Delete', posts_path(@post), method: :delete, data: { confirm: 'Are you sure you wish to delete this post?'} %>
 <% end %>
 <div>
 <h3><%= pluralize(@post.comments.count, 'Comment') %></h3>

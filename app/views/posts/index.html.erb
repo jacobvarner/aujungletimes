@@ -1,7 +1,7 @@
 <% @posts.each do |post| %>
 	<div>
 		<div>
-			<% if post.post_category != nil && post.post_catgory != "" %>
+			<% if post.post_category != nil && post.post_category != "" %>
 				<div><p><i class="material-icons">turned_in</i>&nbsp;<%= post.post_category %></p></div>
 			<% end %>
 			<!-- TODO: replace with actual sharing links -->

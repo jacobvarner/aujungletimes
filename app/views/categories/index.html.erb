@@ -1,3 +1,26 @@
-<% @cats.each do |c| %>
-<p><%= c.category_title %></p> | <%= link_to 'Delete', cateogry_path(c), method: :delete, data: { confirm: 'Are you sure you wish to delete this category?'} %>
-<% end %>
+<h1>Categories</h1>
+<p><%= link_to "New Category", new_category_path %></p>
+<table>
+	<thead>
+		<tr>
+			<td>Category Title</td>
+			<td>Blog or Forum</td>
+			<td>Delete</td>
+		</tr>
+	</thead>
+	<tbody>
+	<% @cats.each do |cat| %>
+		<tr>
+			<td><%= cat.category_title %></td>
+			<td>
+				<% if cat.blog %>
+					Blog
+				<% else %>
+					Forum
+				<% end %>
+			</td>
+			<td><%= link_to 'Delete', destroy_category_path(cat), method: :delete, data: { confirm: 'Are you sure you wish to delete this category?'} %></td>
+		</tr>
+	<% end %>
+	</tbody>
+</table>

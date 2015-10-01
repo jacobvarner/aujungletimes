@@ -23,7 +23,7 @@
 	</div>
 	<div>
 		<%= f.label :category %><br/>
-		<%= f.collection_select :post_category, Category.order(:category_title), :category_title, include_blank: true %>
+		<%= f.collection_select :post_category, Category.order(:category_title), :category_title, :category_title, :include_blank => true %>
 	</div>
 	<div>
 		<%= f.label :post_image %>&nbsp;

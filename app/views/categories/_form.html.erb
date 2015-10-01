@@ -1,9 +1,9 @@
-<%= form_for @cat do |f| %>
-	<% if @post.errors.any? %>
+<%= form_for(@cat) do |f| %>
+	<% if @cat.errors.any? %>
 		<div id="errors">
-			<h2><%= pluralize(@post.errors.count, "error") %> prevented this post from saving</h2>
+			<h2><%= pluralize(@cat.errors.count, "error") %> prevented this category from saving</h2>
 			<ul>
-				<% @post.errors.full_message.each do |msg| %>
+				<% @cat.errors.full_message.each do |msg| %>
 				<li><%= msg %></li>
 				<% end %>
 			</ul>
