@@ -1,0 +1,10 @@
+<%= form_for([@discussion, @discussion.replies.build]) do |f| %>
+
+<p>
+	<%= f.hidden_field :username, :value => current_user.username %>
+	<%= f.text_area :body %>
+</p>
+<p>
+	<%= f.submit %>
+</p>
+<% end %>

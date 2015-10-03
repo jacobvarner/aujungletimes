@@ -1,0 +1,12 @@
+<div>
+	<div>
+		<p><%= reply.body %></p>
+		<div>
+			<p><i class="material-icons">schedule</i>&nbsp;<%= time_ago_in_words(reply.created_at) %> ago</p>
+			<p><i class="material-icons">account_circle</i><strong><%= reply.username %></strong></p>
+		</div>
+	</div>
+	<% if user_signed_in? && (current_user.admin? || current_user.username == reply.username) %>
+		<p><%= link_to 'Delete', [reply.discussion, reply], method: :delete, data: { confirm: 'Are you sure?' } %></p>
+	<% end %>
+</div>

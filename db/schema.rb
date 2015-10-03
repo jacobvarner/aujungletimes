@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151001025105) do
+ActiveRecord::Schema.define(version: 20151003034656) do
 
   create_table "add_slug_to_blogs", force: :cascade do |t|
     t.string   "slug"
@@ -50,6 +50,18 @@ ActiveRecord::Schema.define(version: 20151001025105) do
 
   add_index "comments", ["post_id"], name: "index_comments_on_post_id"
 
+  create_table "discussions", force: :cascade do |t|
+    t.string   "title",                  null: false
+    t.string   "link"
+    t.text     "content",                null: false
+    t.string   "creator"
+    t.string   "category"
+    t.integer  "score",      default: 0
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "slug"
+  end
+
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
     t.integer  "sluggable_id",              null: false
@@ -76,6 +88,16 @@ ActiveRecord::Schema.define(version: 20151001025105) do
     t.string   "slug"
   end
 
+  create_table "replies", force: :cascade do |t|
+    t.string   "username"
+    t.text     "body"
+    t.integer  "discussion_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "replies", ["discussion_id"], name: "index_replies_on_discussion_id"
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",                    null: false
     t.string   "encrypted_password",     default: "",                    null: false
@@ -99,5 +121,20 @@ ActiveRecord::Schema.define(version: 20151001025105) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+  create_table "votes", force: :cascade do |t|
+    t.integer  "votable_id"
+    t.string   "votable_type"
+    t.integer  "voter_id"
+    t.string   "voter_type"
+    t.boolean  "vote_flag"
+    t.string   "vote_scope"
+    t.integer  "vote_weight"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "votes", ["votable_id", "votable_type", "vote_scope"], name: "index_votes_on_votable_id_and_votable_type_and_vote_scope"
+  add_index "votes", ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope"
 
 end

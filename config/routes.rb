@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
 
+  resources :discussions do
+    member do
+      put "plus", to: "discussions#plus"
+      put "minus", to: "discussions#minus"
+    end
+  end
+
   get 'home/index'
 
   # Reroute the default devise routes for authentication
@@ -19,6 +26,13 @@ Rails.application.routes.draw do
   resources :posts do
     resources :comments
   end
+
+  resources :discussions do
+    resources :replies
+  end
+
+  get '/blog' => 'posts#index'
+  get '/forum' => 'discussions#index'
 
   get '/panel' => 'posts#panel', :as => 'panel'
 

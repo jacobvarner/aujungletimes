@@ -1,0 +1,31 @@
+<%= form_for(@discussion) do |f| %>
+	<% if @discussion.errors.any? %>
+		<div id="errors">
+			<h2><%= pluralize(@discussion.errors.count, "error") %> prevented this discussion from saving</h2>
+			<ul>
+				<% @discussion.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+	<div>
+		<%= f.label :title %><br/>
+		<%= f.text_field :title %>
+	</div>
+	<div>
+		<%= f.label "Link (must be preceded by http:// or https://)" %><br/>
+		<%= f.text_field :link %>
+	</div>
+	<div>
+		<%= f.label :content %><br/>
+		<%= f.text_area :content %>
+	</div>
+	<div>
+		<%= f.label :category %><br/>
+		<%= f.collection_select :category, Category.where(blog: false).order(:category_title), :category_title, :category_title, :include_blank => true %>
+	</div>
+	<div>
+		<%= f.submit %>
+	</div>
+<% end %>

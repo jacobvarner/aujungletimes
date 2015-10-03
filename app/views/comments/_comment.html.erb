@@ -4,6 +4,7 @@
 		<div>
 			<p><i class="material-icons">schedule</i>&nbsp;<%= time_ago_in_words(comment.created_at) %> ago</p>
 			<p><i class="material-icons">account_circle</i><strong><%= comment.username %></strong></p>
+		</div>
 	</div>
 	<% if user_signed_in? && (current_user.admin? || current_user.username == comment.username) %>
 		<p><%= link_to 'Delete', [comment.post, comment], method: :delete, data: { confirm: 'Are you sure?' } %></p>

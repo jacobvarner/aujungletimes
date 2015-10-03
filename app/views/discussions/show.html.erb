@@ -1,0 +1,32 @@
+<% @title = @discussion.title %>
+<meta name="description" content="<%= @discussion.content %>">
+<h2><%= link_to @discussion.title, "#{@discussion.link}", target: "_blank" %></h2>
+<!-- Post author, date, and category (if it has one) -->
+<div><p><i class="material-icons">account_circle</i>&nbsp;<strong><%= @discussion.creator %></strong></p></div>
+<div><p><i class="material-icons">schedule</i>&nbsp;<%= @discussion.created_at.strftime("%B %e, %Y") %></p></div>
+<% if @discussion.category != nil && @discussion.category != "" %>
+	<div><p><i class="material-icons">turned_in</i>&nbsp;<%= @discussion.category %></p></div>
+<% end %>
+<!-- if the post belongs to the current user or the current user is an admin, allow for the post to be edited -->
+<% if user_signed_in? && (current_user.username == @discussion.creator || current_user.admin?) %>
+	<%= link_to 'Edit', edit_discussion_path(@discussion) %>
+<% end %>
+<p><%= @discussion.content %></p>
+<div>
+	<!-- TODO: replace with social sharing buttons -->
+	<div><p>TWITTER</p></div>
+	<div><p>FACEBOOK</p></div>
+	<div><p>GOOGLE+</p></div>
+</div>
+<!-- TODO: replace with actual Google AdSense ad -->
+<img src="http://placehold.it/860x150">
+<div>
+<h3><%= pluralize(@discussion.replies.count, 'Reply') %></h3>
+<%= render @discussion.replies %>
+<% if user_signed_in? %>
+	<h3>Reply to this discussion:</h3>
+	<%= render 'replies/form' %>
+<% else %>
+	<p><%= link_to 'Sign In', new_user_session_path %> or <%= link_to 'Sign Up', new_user_registration_path %> to leave a reply</p>
+<% end %>
+</div>

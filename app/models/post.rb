@@ -4,4 +4,6 @@ class Post < ActiveRecord::Base
 	extend FriendlyId
 	friendly_id :post_title, use: :slugged
 
+	validates_uniqueness_of :post_title
+
 end

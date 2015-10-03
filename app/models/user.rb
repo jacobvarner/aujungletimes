@@ -4,10 +4,12 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  acts_as_voter
+
   # validates that username exists and is unique and makes sure Twitter usernames are unique
   validates_presence_of :username
   validates_uniqueness_of :username
-  validates_uniqueness_of :twitter
+  validates_uniqueness_of :twitter, conditions: -> {where.not(twitter: nil)}
 
   def admin?
   	self.permission == "admin"

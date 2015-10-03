@@ -1,0 +1,46 @@
+<% if user_signed_in? %>
+	<%= link_to "Start Discussion", new_discussion_path %>
+<% else %>
+	<p><%= link_to 'Sign In', new_user_session_path %> or <%= link_to 'Sign Up', new_user_registration_path %> to start a discussion</p>
+<% end %>
+<% @discussions.each do |d| %>
+	<div>
+		<div>
+			<% if d.category != nil && d.category != "" %>
+				<div><p><i class="material-icons">turned_in</i>&nbsp;<%= d.category %></p></div>
+			<% end %>
+			<div>
+				<!-- TODO: fix score system -->
+				<div>
+					<%= link_to plus_discussion_path(d), method: :put do %>
+						<i class="material-icons">add</i>
+						<p><%= d.get_upvotes.size %></p>
+					<% end %>
+				<div>
+				<div>
+					<%= link_to minus_discussion_path(d), method: :put do %>
+						<i class="material-icons">remove</i>
+						<p><%= d.get_downvotes.size %></p>
+					<% end %>
+				<div>
+			</div>
+			<!-- TODO: replace with actual sharing links -->
+			<div><p>TWITTER</p></div>
+			<div><p>FACEBOOK</p></div>
+			<div><p>GOOGLE+</p></div>
+		</div>
+		<div>
+			<h2><%= link_to d.title, d %></h2>
+			<div>
+				<p><i class="material-icons">account_circle</i>&nbsp;<%= d.creator %></p>
+				<p><i class="material-icons">schedule</i>&nbsp;<%= d.created_at.strftime("%B %e, %Y") %></p>
+				<% if current_user.admin? %>
+					<%= link_to 'Delete', discussion_path(d), method: :delete, data: { confirm: 'Are you sure you wish to delete this discussion?'} %>
+				<% end %>
+				<p><i class="material-icons">comment</i>&nbsp;<%= d.replies.count %></p>
+			</div>
+		<div>
+	</div>
+<% end %>
+<!-- pagination links with will_paginate -->
+<div><%= will_paginate @posts %><div>
