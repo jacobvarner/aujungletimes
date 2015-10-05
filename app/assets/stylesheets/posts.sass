@@ -1,0 +1,66 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.blog-container
+	width: 1368px
+	margin: 0 auto
+	overflow: hidden
+
+.post-container
+	display: inline-block
+	float: left
+	width: 640px
+	margin: 20px
+
+	.post-tabs
+		width: 644px
+		height: 40px
+
+		.category-tab
+			display: table
+			height: 40px
+			overflow: hidden
+			min-width: 200px
+			float: left
+			background: #dd550c
+			color: white
+			font-size: 20px
+			font-family: 'Roboto', sans-serif
+			font-weight: bold
+
+			i
+				margin: 8px 5px 0 5px
+
+			span
+				display: table-cell
+				vertical-align: middle
+				margin-left: 5px
+				position: relative
+				text-align: left
+
+		.sharing-buttons
+			height: 40px
+			float: right
+			width: 150px
+			margin-right: 50px
+
+			.tweet-button
+				background: #55acee
+				width: 50px
+				height: 40px
+
+			.share-button
+				background: #3b5998
+				width: 50px
+				height: 40px
+				
+			.plus-button
+				background: #DC4E41
+				width: 50px
+				height: 40px
+
+	.post-content
+		width: 600px
+		padding: 20px
+		border: 2px solid #dd550c

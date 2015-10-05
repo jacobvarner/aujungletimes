@@ -38,6 +38,8 @@ gem 'friendly_id'
 # Use acts_as_votable for voting
 gem 'acts_as_votable'
 
+gem 'normalize-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

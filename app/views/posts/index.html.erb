@@ -1,24 +1,27 @@
-<% @posts.each do |post| %>
-	<div>
-		<div>
-			<% if post.post_category != nil && post.post_category != "" %>
-				<div><p><i class="material-icons">turned_in</i>&nbsp;<%= post.post_category %></p></div>
-			<% end %>
-			<!-- TODO: replace with actual sharing links -->
-			<div><p>TWITTER</p></div>
-			<div><p>FACEBOOK</p></div>
-			<div><p>GOOGLE+</p></div>
-		</div>
-		<div>
-			<h2><%= link_to post.post_title, post %></h2>
-			<img src="http://placehold.it/600x400">
-			<div>
-				<p><i class="material-icons">account_circle</i>&nbsp;<%= post.post_author %></p>
-				<p><i class="material-icons">schedule</i>&nbsp;<%= post.created_at.strftime("%B %e, %Y") %></p>
-				<p><i class="material-icons">comment</i>&nbsp;<%= post.comments.count %></p>
+<div class="blog-container">
+	<% @posts.each do |post| %>
+		<div class="post-container">
+			<div class="post-tabs">
+				<% if post.post_category != nil && post.post_category != "" %>
+					<div class="category-tab"><i class="material-icons">turned_in</i><span><%= post.post_category %></span></div>
+				<% end %>
+				<div class="sharing-buttons">
+					<div><a class="tweet-button" href="https://twitter.com/intent/tweet?url=http://www.aujungletimes.com/posts/<%= post.slug %>&text=<%= post.post_title %>&related=TheJungleTimes" target="_blank"><img src="<%= asset_path "logos/twitter.png" %>" height="30px"/></a></div>
+					<div><a class="share-button" href="https://www.facebook.com/sharer/sharer.php?u=http://www.aujungletimes.com/posts/<%= post.slug %>" target="_blank"><img src="<%= asset_path "logos/facebook.png" %>" height="25px"/></a></div>
+					<div><a class="plus-button" href="https://plus.google.com/share?url=http://www.aujungletimes.com/posts/<%= post.slug %>" target="_blank"><img src="<%= asset_path "logos/googleplus.png" %>" height="35px"/></a></div>
+				</div>
 			</div>
-		<div>
-	</div>
-<% end %>
-<!-- pagination links with will_paginate -->
-<div><%= will_paginate @posts %><div>
+			<div class="post-content">
+				<h2 class="post-title"><%= link_to post.post_title, post %></h2>
+				<img class="post-image" src="http://placehold.it/600x400">
+				<div class="post-info">
+					<p class="post_author"><i class="material-icons">account_circle</i>&nbsp;<%= post.post_author %></p>
+					<p class="post-date"><i class="material-icons">schedule</i>&nbsp;<%= post.created_at.strftime("%B %e, %Y") %></p>
+					<p class="post-comments"><i class="material-icons">comment</i>&nbsp;<%= post.comments.count %></p>
+				</div>
+			</div>
+		</div>
+	<% end %>
+	<!-- pagination links with will_paginate -->
+	<div><%= will_paginate @posts %></div>
+</div>

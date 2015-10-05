@@ -34,6 +34,9 @@ Rails.application.routes.draw do
   get '/blog' => 'posts#index'
   get '/forum' => 'discussions#index'
 
+  get '/about' => 'pages#about'
+  get '/contact' => 'pages#contact'
+
   get '/panel' => 'posts#panel', :as => 'panel'
 
   get '/categories' => 'categories#index', :as => 'categories'
