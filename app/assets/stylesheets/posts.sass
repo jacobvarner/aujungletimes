@@ -3,22 +3,20 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .blog-container
-	width: 1368px
+	width: 1872px
 	margin: 0 auto
 	overflow: hidden
 
 .post-container
 	display: inline-block
 	float: left
-	width: 640px
-	margin: 20px
+	width: 624px
 
 	.post-tabs
-		width: 644px
+		margin: 10px 10px 0 10px
 		height: 40px
 
 		.category-tab
-			display: table
 			height: 40px
 			overflow: hidden
 			min-width: 200px
@@ -30,37 +28,140 @@
 			font-weight: bold
 
 			i
-				margin: 8px 5px 0 5px
-
-			span
-				display: table-cell
+				display: inline-flex
 				vertical-align: middle
-				margin-left: 5px
-				position: relative
-				text-align: left
+				margin: 10px
+
+			p
+				display: inline-flex
+				vertical-align: middle
+				margin: 10px 10px 10px 0
 
 		.sharing-buttons
 			height: 40px
+			display: inline
 			float: right
-			width: 150px
-			margin-right: 50px
 
 			.tweet-button
+				display: inline
+				float: right
 				background: #55acee
 				width: 50px
 				height: 40px
 
+				img
+					height: 20px
+					margin: 10px 12px
+
 			.share-button
+				display: inline
+				float: right
 				background: #3b5998
 				width: 50px
 				height: 40px
+
+				img
+					height: 20px
+					margin: 10px 15px
 				
 			.plus-button
+				display: inline
+				float: right
 				background: #DC4E41
 				width: 50px
 				height: 40px
 
+				img
+					height: 20px
+					margin: 10px 9px
+
 	.post-content
-		width: 600px
+		margin: 0px 10px 10px 10px
 		padding: 20px
 		border: 2px solid #dd550c
+
+		.post-title
+			font-family: 'Roboto', sans-serif
+			font-size: 20px
+			text-decoration: none
+			color: #03244d
+			margin: 0 0 5px 0
+
+			a, a:visited, a:hover, a:active
+				text-decoration: none
+				color: #03244d
+
+		.post-image
+			width: 100%
+			margin: 5px 0
+
+		.post-info
+			margin: 5px 0 0 0
+			padding: 0
+			width: 100%
+			overflow: hidden
+
+			.post-author
+				display: inline
+				float: left
+				height: 20px
+				margin: 0
+
+				i
+					display: inline-flex
+					vertical-align: middle
+					margin: 0 5px 0 0
+
+				p
+					display: inline-flex
+					vertical-align: middle
+					margin: 0 15px 0 0
+
+			.post-date
+				display: inline
+				float: left
+				height: 25px
+				margin: 0
+
+				i
+					display: inline-flex
+					vertical-align: middle
+					margin: 0 5px 0 0
+
+				p
+					display: inline-flex
+					vertical-align: middle
+					margin: 0 15px 0 0
+
+			.post-comments
+				display: inline
+				float: right
+				height: 20px
+				margin: 0
+
+				i
+					display: inline-flex
+					vertical-align: middle
+					margin: 0 5px 0 0
+
+				p
+					display: inline-flex
+					vertical-align: middle
+					margin: 0
+
+@media screen and (max-width: 1872px)
+	.blog-container
+		width: 1248px
+
+@media screen and (max-width: 1248px)
+	.blog-container
+		width: 624px
+
+@media screen and (max-width: 624px)
+	.blog-container
+		width: 100%
+
+	.post-container
+		width: 100%
+		margin: 0
+		

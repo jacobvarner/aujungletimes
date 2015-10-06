@@ -2,7 +2,7 @@ class PostsController < ApplicationController
 	before_action :authenticate_user!, except: [:index, :show]
 
 	def index
-		@posts = Post.where(publish: true).paginate(:page => params[:page], per_page: 10).order('created_at DESC')
+		@posts = Post.where(publish: true).paginate(:page => params[:page], per_page: 12).order('created_at DESC')
 	end
 
 	def new
