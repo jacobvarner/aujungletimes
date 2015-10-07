@@ -4,8 +4,8 @@
 
 .blog-container
 	width: 1872px
-	margin: 0 auto
-	overflow: hidden
+	margin: 10px auto
+	clear: both
 
 .post-container
 	display: inline-block
@@ -19,7 +19,6 @@
 		.category-tab
 			height: 40px
 			overflow: hidden
-			min-width: 200px
 			float: left
 			background: #dd550c
 			color: white
@@ -35,7 +34,7 @@
 			p
 				display: inline-flex
 				vertical-align: middle
-				margin: 10px 10px 10px 0
+				margin: 10px 15px 10px 0
 
 		.sharing-buttons
 			height: 40px
@@ -82,6 +81,10 @@
 
 		.post-title
 			font-family: 'Roboto', sans-serif
+			width: 560px
+			overflow: hidden
+			white-space: nowrap
+			text-overflow: ellipsis
 			font-size: 20px
 			text-decoration: none
 			color: #03244d
@@ -104,7 +107,7 @@
 			.post-author
 				display: inline
 				float: left
-				height: 20px
+				height: 24px
 				margin: 0
 
 				i
@@ -120,7 +123,7 @@
 			.post-date
 				display: inline
 				float: left
-				height: 25px
+				height: 24px
 				margin: 0
 
 				i
@@ -136,7 +139,7 @@
 			.post-comments
 				display: inline
 				float: right
-				height: 20px
+				height: 24px
 				margin: 0
 
 				i
@@ -148,6 +151,51 @@
 					display: inline-flex
 					vertical-align: middle
 					margin: 0
+
+.ad-blog-home-bottom
+	clear: both
+	max-width: 1200px
+	padding: 10px 10px
+	margin: 0 auto
+
+.pagination
+	padding: 10px
+	text-align: center
+	background: white
+	clear: both
+	cursor: default
+	a, span, em
+		padding: 10px 15px
+		display: block
+		float: left
+		margin-right: -2px
+	.disabled
+		color: #999999
+		border: 2px solid #dd550c
+	.current
+		font-style: normal
+		font-weight: bold
+		background: #dd550c
+		color: white
+		border: 2px solid #dd550c
+	a
+		text-decoration: none
+		color: #dd550c
+		border: 2px solid #dd550c
+		&:hover, &:focus
+			color: #f68026
+			border-color: #f68026
+	/* self-clearing method: */
+	&:after
+		content: "."
+		display: block
+		height: 0
+		clear: both
+		visibility: hidden
+	* html &
+		height: 1%
+	*:first-child+html &
+		overflow: hidden
 
 @media screen and (max-width: 1872px)
 	.blog-container
@@ -164,4 +212,81 @@
 	.post-container
 		width: 100%
 		margin: 0
-		
+
+		.post-tabs
+			height: 30px
+
+			.category-tab
+				height: 30px
+				font-size: 15px
+
+				i
+					margin: 5px
+
+				p
+					margin: 5px 10px 5px 0
+
+			.sharing-buttons
+				height: 30px
+
+				.tweet-button
+					width: 37.5px
+					height: 30px
+
+					img
+						height: 15px
+						margin: 7.5px 9px
+
+				.share-button
+					width: 37.5px
+					height: 30px
+
+					img
+						height: 15px
+						margin: 7.5px 11.25px
+					
+				.plus-button
+					width: 37.5px
+					height: 30px
+
+					img
+						height: 15px
+						margin: 7.5px 6.75px
+
+		.post-content
+			padding: 10px
+
+			.post-title
+				width: initial
+				text-overflow: initial
+				white-space: initial
+
+			.post-info
+
+				.post-author
+
+					i
+						font-size: 18px
+
+					p
+						margin: 0 11.25px 0 0
+						font-size: 15px
+
+				.post-date
+					clear: left
+
+					i
+						font-size: 18px
+
+					p
+						margin: 0 11.25px 0 0
+						font-size: 15px
+
+				.post-comments
+
+					i
+						font-size: 18px
+
+					p
+						font-size: 15px
+				

@@ -1,0 +1,233 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require normalize-rails
+ *= require_self
+ *= require_tree .
+ *
+ */
+
+.header-title
+	text-align: center
+	font-family: 'Ubuntu', sans-serif
+	font-size: 96px
+	color: #dd550c
+	margin: 20px
+
+.header-bar
+	width: 100%
+	background: #03244d
+	height: 50px
+
+	.header-links
+		float: right
+		margin-right: 30px
+
+		p
+			color: white
+			font-family: 'Open Sans', sans-serif
+			font-size: 14px
+			margin: 15px 20px
+
+		a, a:visited, a:hover, a:active
+			color: #dd550c
+			text-decoration: none
+
+		.not-signed-in
+
+			a, a:visited
+				display: inline-block
+				font-size: 14px
+				padding: 5px 20px
+				margin: 10px 0px 10px 20px
+				border: 2px solid white
+				text-decoration: none
+				background: #dd550c
+				color: white
+
+			a:hover, a:active
+				background: #f68026
+
+	.header-navigation
+		float: left
+		margin-left: 20px
+
+		ul
+			margin: 0
+			padding-left: 0px
+
+			li
+				height: 50px
+				margin: 0
+				display: inline-block
+
+
+				i
+					display: inline-flex
+					vertical-align: middle
+					color: white
+					margin: 10px 10px
+					font-size: 30px
+
+				a, a:visited
+					display: inline-flex
+					vertical-align: middle
+					color: white
+					font-size: 20px
+					font-family: 'Roboto', sans-serif
+					text-decoration: none
+					margin-left: 0px
+					margin-right: 10px
+
+				a:hover, a:active
+					color: #dd550c
+
+.ad-main-top
+	float: right
+	height: 90px
+	width: 970px
+	margin: 20px 30px 20px 0px
+
+.social-media-links
+	width: 160px
+	height: 90px
+	float: left
+	margin: 20px 30px
+
+	#twitter-link
+		display: block
+		width: 160px
+		height: 30px
+		margin-bottom: 30px
+		background: #55acee
+		overflow: hidden
+
+		img
+			height: 20px
+			margin: 5px 5px
+			float: left
+			display: inline-flex
+
+		p
+			font-size: 15px
+			font-family: 'Open Sans', sans-serif
+			color: white
+			float: left
+			margin: 4px 5px
+
+
+	#facebook-link
+		display: block
+		width: 160px
+		height: 30px
+		background: #3b5998
+		overflow: hidden
+
+		img
+			height: 20px
+			margin: 5px 7px
+			float: left
+			display: inline-flex
+
+		p
+			font-size: 15px
+			font-family: 'Open Sans', sans-serif
+			color: white
+			float: left
+			margin: 4px 5px
+
+@media screen and (max-width: 1220px)
+	
+	.ad-main-top
+		width: 728px
+
+@media screen and (max-width: 978px)
+
+	.ad-main-top
+		float: initial
+		width: 100%
+		height: initial
+		margin: 20px 0px
+
+	.social-media-links
+		width: 320px
+		margin: 20px auto
+		height: 30px
+		overflow: hidden
+		float: initial
+
+		#twitter-link
+			display: inline-block
+			margin-bottom: 0px
+
+		#facebook-link
+			display: inline-block
+
+@media screen and (max-width: 1080px)
+
+	.header-title
+		font-size: 36px
+		margin: 10px
+
+	.header-bar
+		height: 80px
+
+		.header-links
+			float: initial
+			text-align: center
+			white-space: nowrap
+			overflow: scroll
+			margin: 0 10px
+
+			p
+				color: white
+				font-family: 'Open Sans', sans-serif
+				font-size: 14px
+				margin: 5px 0 15px
+
+			a, a:visited, a:hover, a:active
+				color: #dd550c
+				text-decoration: none
+
+			.not-signed-in
+
+				a, a:visited
+					margin: 5px 10px
+
+		.header-navigation
+			float: initial
+			width: 320px
+			margin: 0 auto
+
+			ul
+				margin: 0
+				padding-left: 0px
+
+				li
+					height: 40px
+					margin: 0
+					display: inline-block
+
+
+					i
+						margin: 11px 5px
+						font-size: 18px
+
+					a, a:visited
+						font-size: 14px
+						font-family: 'Roboto', sans-serif
+						text-decoration: none
+						margin-left: 0px
+						margin-right: 10px
+
+					a:hover, a:active
+						color: #dd550c

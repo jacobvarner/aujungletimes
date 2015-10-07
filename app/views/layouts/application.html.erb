@@ -20,36 +20,41 @@
 	<% if alert %>
 	  <p class="alert alert-danger"><%= alert %></p>
 	<% end %>
-	<h1><%= link_to 'The Jungle Times', posts_path %></h1>
-	<div>
-		<% if user_signed_in? && (current_user.admin? || current_user.writer?)%>
-			<p>Signed in as <strong><%= current_user.username %></strong> | <%= link_to 'Logout', destroy_user_session_path, :method => :delete %> | <%= link_to 'Edit Profile', edit_user_registration_path %> | <%= link_to 'Posts Panel', panel_path %> | <%= link_to 'New Post', new_post_path %></p>
-		<% elsif user_signed_in? %>
-			<p>Signed in as <strong><%= current_user.username %></strong> | <%= link_to 'Logout', destroy_user_session_path, :method => :delete %> | <%= link_to 'Edit Profile', edit_user_registration_path %></p>
-		<% else %>
-			<%= link_to 'Sign In', new_user_session_path %> | <%= link_to 'Sign Up', new_user_registration_path %>
-		<% end %>
+	<h1 class="header-title">The Jungle Times</h1>
+	<div class="header-bar">
+		<nav class="header-navigation">
+			<ul>
+				<li><i class="material-icons">description</i><%= link_to 'Blog', posts_path %></li>
+				<li><i class="material-icons">forum</i><%= link_to 'Forum', discussions_path %></li>
+				<li><i class="material-icons">live_help</i><%= link_to 'About', '/about' %></li>
+				<li><i class="material-icons">email</i><%= link_to 'Contact', '/contact' %></li>
+			</ul>
+		</nav>
+		<div class="header-links">
+			<% if user_signed_in? && (current_user.admin? || current_user.writer?)%>
+				<p>Signed in as <strong><%= current_user.username %></strong> | <%= link_to 'Logout', destroy_user_session_path, :method => :delete %> | <%= link_to 'Edit Profile', edit_user_registration_path %> | <%= link_to 'Posts Panel', panel_path %> | <%= link_to 'New Post', new_post_path %></p>
+			<% elsif user_signed_in? %>
+				<p>Signed in as <strong><%= current_user.username %></strong> | <%= link_to 'Logout', destroy_user_session_path, :method => :delete %> | <%= link_to 'Edit Profile', edit_user_registration_path %></p>
+			<% else %>
+				<span class="not-signed-in"><%= link_to 'Sign In', new_user_session_path %>&nbsp;<%= link_to 'Sign Up', new_user_registration_path %></span>
+			<% end %>
+		</div>
 	</div>
-	<nav>
-		<ul>
-			<li><i class="material-icons">description</i><%= link_to 'Blog', posts_path %></li>
-			<li><i class="material-icons">forum</i><%= link_to 'Forum', discussions_path %></li>
-			<li><i class="material-icons">live_help</i><%= link_to 'About', '/about' %></li>
-			<li><i class="material-icons">email</i><%= link_to 'Contact', '/contact' %></li>
-		</ul>
-	</nav>
+	<div class="ad-main-top">
+		<!-- main_top -->
+		<ins class="adsbygoogle"
+		     style="display:block"
+		     data-ad-client="ca-pub-8692643521715142"
+		     data-ad-slot="1162836931"
+		     data-ad-format="auto"></ins>
+	</div>
+	<div class="social-media-links">
+		<a id="twitter-link" href="http://www.twitter.com/thejungletimes" target="_blank"><img src="<%= asset_path "logos/twitter.png" %>"/><p>TheJungleTimes</p></a><a id="facebook-link" href="http://www.facebook.com/thejungletimes" target="_blank"><img src="<%= asset_path "logos/facebook.png" %>"/><p>TheJungleTimes</p></a>
+	</div>
 
 <%= yield %>
-<!-- Twitter js -->
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-<!-- Facebook js -->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=1422431358041159";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+	<!-- Google AdSsense JS -->
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </body>
 </html>
