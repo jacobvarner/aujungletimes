@@ -1,0 +1,146 @@
+// Place all the styles related to the Discussions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.discussion-wrapper
+	width: 1200px
+	overflow: hidden
+	margin: 20px auto
+
+	.start-discussion-button, .start-discussion-button:visited
+		display: block
+		float: left
+		width: 150px
+		height: 16px
+		margin: 20px 0px
+		text-align: center
+		padding: 14px 10px 16px 10px
+		background: #03244d
+		text-decoration: none
+		font-family: 'Roboto', sans-serif
+		font-size: 16px
+		font-weight: bold
+		color: white
+
+	.start-discussion-button:hover, .start-discussion-button:active
+		background: #496e9c
+	
+	.discussion-container
+		width: 100%
+		clear: both
+		height: 140px
+		margin-bottom: 20px
+		overflow: hidden
+
+		.vote-buttons
+			height: 90px
+			width: 50px
+			display: block
+			float: left
+			margin: 50px 0 0 0
+
+			.vote-plus
+				display: block
+				width: 50px
+
+				a, a:active, a:visited, a:hover
+					text-decoration: none
+					color: white
+
+					i
+						display: block
+						text-align: center
+						vertical-align: middle
+						background: #dd550c
+
+					p
+						color: #03244d
+						display: block
+						text-align: center
+						vertical-align: middle
+						padding: 5px
+						margin: 0
+						font-size: 20px
+						border-left: 2px solid #dd550c
+
+
+			.vote-minus
+				display: block
+				width: 50px
+
+				a, a:active, a:visited, a:hover
+					text-decoration: none
+					color: white
+
+					i
+						display: block
+						text-align: center
+						vertical-align: middle
+						background: #dd550c
+
+		.discussion-tabs
+			height: 40px
+
+			.category-tab
+				height: 40px
+				overflow: hidden
+				float: left
+				background: #dd550c
+				color: white
+				font-size: 20px
+				font-family: 'Roboto', sans-serif
+				font-weight: bold
+
+				i
+					display: inline-flex
+					vertical-align: middle
+					margin: 10px
+
+				p
+					display: inline-flex
+					vertical-align: middle
+					margin: 10px 15px 10px 0
+
+			.sharing-buttons
+				height: 40px
+				display: inline
+				float: right
+
+				.tweet-button
+					display: inline
+					float: right
+					background: #55acee
+					width: 50px
+					height: 40px
+
+					img
+						height: 20px
+						margin: 10px 12px
+
+				.share-button
+					display: inline
+					float: right
+					background: #3b5998
+					width: 50px
+					height: 40px
+
+					img
+						height: 20px
+						margin: 10px 15px
+					
+				.plus-button
+					display: inline
+					float: right
+					background: #DC4E41
+					width: 50px
+					height: 40px
+
+					img
+						height: 20px
+						margin: 10px 9px
+
+		.discussion-content
+			margin: 0 0 0 50px
+			padding: 20px
+			height: 56px
+			border: 2px solid #dd550c

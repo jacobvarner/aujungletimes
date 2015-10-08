@@ -1,46 +1,47 @@
-<% if user_signed_in? %>
-	<%= link_to "Start Discussion", new_discussion_path %>
-<% else %>
-	<p><%= link_to 'Sign In', new_user_session_path %> or <%= link_to 'Sign Up', new_user_registration_path %> to start a discussion</p>
-<% end %>
-<% @discussions.each do |d| %>
-	<div>
-		<div>
-			<% if d.category != nil && d.category != "" %>
-				<div><p><i class="material-icons">turned_in</i>&nbsp;<%= d.category %></p></div>
-			<% end %>
-			<div>
-				<!-- TODO: fix score system -->
-				<div>
+<div class="discussion-wrapper">
+	<% if user_signed_in? %>
+		<%= link_to "Start Discussion", new_discussion_path, class: "start-discussion-button" %>
+	<% else %>
+		<p class="start-discussion-text"><%= link_to 'Sign In', new_user_session_path %> or <%= link_to 'Sign Up', new_user_registration_path %> to start a discussion</p>
+	<% end %>
+	<% @discussions.each do |d| %>
+		<div class="discussion-container">
+			<div class="vote-buttons">
+				<div class="vote-plus">
 					<%= link_to plus_discussion_path(d), method: :put do %>
 						<i class="material-icons">add</i>
-						<p><%= d.get_upvotes.size %></p>
+						<p><%= d.get_upvotes.size - d.get_downvotes.size %></p>
 					<% end %>
-				<div>
-				<div>
+				</div>
+				<div class="vote-minus">
 					<%= link_to minus_discussion_path(d), method: :put do %>
 						<i class="material-icons">remove</i>
-						<p><%= d.get_downvotes.size %></p>
 					<% end %>
-				<div>
+				</div>
 			</div>
-			<!-- TODO: replace with actual sharing links -->
-			<div><p>TWITTER</p></div>
-			<div><p>FACEBOOK</p></div>
-			<div><p>GOOGLE+</p></div>
-		</div>
-		<div>
-			<h2><%= link_to d.title, d %></h2>
-			<div>
-				<p><i class="material-icons">account_circle</i>&nbsp;<%= d.creator %></p>
-				<p><i class="material-icons">schedule</i>&nbsp;<%= d.created_at.strftime("%B %e, %Y") %></p>
-				<% if current_user.admin? %>
-					<%= link_to 'Delete', discussion_path(d), method: :delete, data: { confirm: 'Are you sure you wish to delete this discussion?'} %>
+			<div class="discussion-tabs">
+				<% if d.category != nil && d.category != "" %>
+					<span class="category-tab"><i class="material-icons">turned_in</i><p><%= d.category %></p></span>
 				<% end %>
-				<p><i class="material-icons">comment</i>&nbsp;<%= d.replies.count %></p>
+				<div class="sharing-buttons">
+					<a class="tweet-button" href="https://twitter.com/intent/tweet?url=http://www.aujungletimes.com/discussions/<%= d.slug %>&text=<%= d.title %>&related=TheJungleTimes" target="_blank"><img src="<%= asset_path "logos/twitter.png" %>" height="30px"/></a>
+					<a class="share-button" href="https://www.facebook.com/sharer/sharer.php?u=http://www.aujungletimes.com/discussions/<%= d.slug %>" target="_blank"><img src="<%= asset_path "logos/facebook.png" %>" height="25px"/></a>
+					<a class="plus-button" href="https://plus.google.com/share?url=http://www.aujungletimes.com/discussions/<%= d.slug %>" target="_blank"><img src="<%= asset_path "logos/googleplus.png" %>" height="35px"/></a>
+				</div>
 			</div>
-		<div>
-	</div>
-<% end %>
-<!-- pagination links with will_paginate -->
-<div><%= will_paginate @posts %><div>
+			<div class="discussion-content">
+				<h2 class="discussion-title"><%= link_to d.title, d %></h2>
+				<div class="discussion-info">
+					<span class="discussion-creator"><i class="material-icons">account_circle</i><p><%= d.creator %></p></span>
+					<span class="discussion-date"><i class="material-icons">schedule</i><p><%= d.created_at.strftime("%B %e, %Y") %></p></span>
+					<% if user_signed_in? && current_user.admin? %>
+						<%= link_to 'Delete', discussion_path(d), method: :delete, data: { confirm: 'Are you sure you wish to delete this discussion?'} %>
+					<% end %>
+					<span class="discussion-reply"><i class="material-icons">comment</i><p><%= d.replies.count %></p></span>
+				</div>
+			</div>
+		</div>
+	<% end %>
+	<!-- pagination links with will_paginate -->
+	<%= will_paginate @posts %>
+</div>
