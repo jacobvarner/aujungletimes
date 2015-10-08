@@ -2,6 +2,17 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :discussions do
+    collection do
+      get "toptoday"
+      get "topweek"
+      get "topmonth"
+      get "topyear"
+      get "mosttoday"
+      get "mostweek"
+      get "mostmonth"
+      get "mostyear"
+    end
+
     member do
       put "plus", to: "discussions#plus"
       put "minus", to: "discussions#minus"

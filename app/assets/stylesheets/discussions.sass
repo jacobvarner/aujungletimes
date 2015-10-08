@@ -14,7 +14,7 @@
 		height: 16px
 		margin: 20px 0px
 		text-align: center
-		padding: 14px 10px 16px 10px
+		padding: 14px 5px 16px 5px
 		background: #03244d
 		text-decoration: none
 		font-family: 'Roboto', sans-serif
@@ -28,7 +28,6 @@
 	.discussion-container
 		width: 100%
 		clear: both
-		height: 140px
 		margin-bottom: 20px
 		overflow: hidden
 
@@ -53,15 +52,15 @@
 						vertical-align: middle
 						background: #dd550c
 
-					p
-						color: #03244d
-						display: block
-						text-align: center
-						vertical-align: middle
-						padding: 5px
-						margin: 0
-						font-size: 20px
-						border-left: 2px solid #dd550c
+				p
+					color: #03244d
+					display: block
+					text-align: center
+					vertical-align: middle
+					padding: 5px
+					margin: 0
+					font-size: 20px
+					border-left: 2px solid #dd550c
 
 
 			.vote-minus
@@ -142,5 +141,76 @@
 		.discussion-content
 			margin: 0 0 0 50px
 			padding: 20px
-			height: 56px
 			border: 2px solid #dd550c
+			overflow: hidden
+
+			.discussion-title
+				margin: 0
+
+				a, a:active, a:visited, a:hover
+					margin: 0
+					font-family: 'Roboto', sans-serif
+					font-size: 20px
+					text-decoration: none
+					color: #03244d
+
+			.discussion-info
+				display: inline
+				float: left
+				height: 24px
+				width: 100%
+				padding-top: 20px
+				overflow: hidden
+
+				
+				.discussion-creator
+					display: inline
+					float: left
+					height: 24px
+					margin: 0
+
+					i
+						display: inline-flex
+						vertical-align: middle
+						margin: 0 5px 0 0
+
+					p
+						display: inline-flex
+						vertical-align: middle
+						margin: 0 15px 0 0
+
+				.discussion-date
+					display: inline
+					float: left
+					height: 24px
+					margin: 0
+
+					i
+						display: inline-flex
+						vertical-align: middle
+						margin: 0 5px 0 0
+
+					p
+						display: inline-flex
+						vertical-align: middle
+						margin: 0 15px 0 0
+
+				a, a:hover, a:visited, a:active
+					color: #dd550c
+					text-decoration: none
+
+				.discussion-reply
+					display: inline
+					float: right
+					height: 24px
+					margin: 0
+
+					i
+						display: inline-flex
+						vertical-align: middle
+						margin: 0 5px 0 0
+
+					p
+						display: inline-flex
+						vertical-align: middle
+						margin: 0

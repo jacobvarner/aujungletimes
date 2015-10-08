@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151003034656) do
+ActiveRecord::Schema.define(version: 20151008214446) do
 
   create_table "add_slug_to_blogs", force: :cascade do |t|
     t.string   "slug"
@@ -51,15 +51,16 @@ ActiveRecord::Schema.define(version: 20151003034656) do
   add_index "comments", ["post_id"], name: "index_comments_on_post_id"
 
   create_table "discussions", force: :cascade do |t|
-    t.string   "title",                  null: false
+    t.string   "title",                   null: false
     t.string   "link"
-    t.text     "content",                null: false
+    t.text     "content",                 null: false
     t.string   "creator"
     t.string   "category"
-    t.integer  "score",      default: 0
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.integer  "score",       default: 0
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.string   "slug"
+    t.integer  "reply_count", default: 0
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
