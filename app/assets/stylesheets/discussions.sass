@@ -24,7 +24,71 @@
 
 	.start-discussion-button:hover, .start-discussion-button:active
 		background: #496e9c
-	
+
+	.discussion-sort
+		margin: 20px 0
+		width: 216px
+		height: 42px
+		border: 2px solid #03244d
+		float: right
+
+		i
+			float: right
+			color: white
+			display: block
+			height: 42px
+			width: 42px
+			border-left: 2px solid #03244d
+			background: #03244d
+			font-size: 36px
+			text-align: center
+
+		.sort-list
+			display: block
+			padding: 0
+			margin: 0
+			float: left
+			height: 42px
+			width: 172px
+			background: white
+
+			.sort-item.current
+				width: 142px
+				height: 22px
+				color: #03244d
+				font-family: 'Roboto', sans-serif
+				font-weight: bold
+				font-size: 14px
+				padding: 10px 10px
+				list-style: none
+
+				a, a:visited, a:hover, a:active
+					text-decoration: none
+					color: #03244d
+
+			.sort-item.other
+				width: 198px
+				margin-left: -2px
+				display: block
+				background: #03244d
+				border: 2px solid #03244d
+				height: 22px
+				color: white
+				font-family: 'Roboto', sans-serif
+				font-weight: bold
+				font-size: 14px
+				padding: 10px 10px
+				list-style: none
+
+				a, a:visited
+					text-decoration: none
+					color: white
+
+				a:hover, a:active
+					text-decoration: none
+					color: #496e9c
+
+
 	.discussion-container
 		width: 100%
 		clear: both
