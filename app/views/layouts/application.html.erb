@@ -14,6 +14,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div class="ad-main-top">
+		<!-- main_top -->
+		<ins class="adsbygoogle"
+		     style="display:block"
+		     data-ad-client="ca-pub-8692643521715142"
+		     data-ad-slot="1162836931"
+		     data-ad-format="auto"></ins>
+	</div>
 	<% if notice %>
 	  <p class="alert alert-success"><%= notice %></p>
 	<% end %>
@@ -39,14 +47,6 @@
 				<span class="not-signed-in"><%= link_to 'Sign In', new_user_session_path %>&nbsp;<%= link_to 'Sign Up', new_user_registration_path %></span>
 			<% end %>
 		</div>
-	</div>
-	<div class="ad-main-top">
-		<!-- main_top -->
-		<ins class="adsbygoogle"
-		     style="display:block"
-		     data-ad-client="ca-pub-8692643521715142"
-		     data-ad-slot="1162836931"
-		     data-ad-format="auto"></ins>
 	</div>
 	<div class="social-media-links">
 		<a id="twitter-link" href="http://www.twitter.com/thejungletimes" target="_blank"><img src="<%= asset_path "logos/twitter.png" %>"/><p>TheJungleTimes</p></a><a id="facebook-link" href="http://www.facebook.com/thejungletimes" target="_blank"><img src="<%= asset_path "logos/facebook.png" %>"/><p>TheJungleTimes</p></a>

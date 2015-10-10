@@ -92,23 +92,22 @@
 					color: #dd550c
 
 .ad-main-top
-	float: right
 	height: 90px
 	width: 970px
-	margin: 20px 30px 20px 0px
+	margin: 0 auto 20px
 
 .social-media-links
-	width: 160px
-	height: 90px
+	width: 330px
+	height: 30px
 	float: left
 	margin: 20px 30px
 
 	#twitter-link
-		display: block
+		display: inline-block
 		width: 160px
 		height: 30px
-		margin-bottom: 30px
 		background: #55acee
+		margin-right: 10px
 		overflow: hidden
 
 		img
@@ -126,7 +125,7 @@
 
 
 	#facebook-link
-		display: block
+		display: inline-block
 		width: 160px
 		height: 30px
 		background: #3b5998
@@ -145,18 +144,19 @@
 			float: left
 			margin: 4px 5px
 
-@media screen and (max-width: 1220px)
+@media screen and (max-width: 970px)
 	
 	.ad-main-top
 		width: 728px
 
-@media screen and (max-width: 978px)
+@media screen and (max-width: 728px)
 
 	.ad-main-top
-		float: initial
 		width: 100%
 		height: initial
-		margin: 20px 0px
+		margin: 0 auto 20px
+
+@media screen and (max-width: 390px)
 
 	.social-media-links
 		width: 320px
@@ -166,11 +166,9 @@
 		float: initial
 
 		#twitter-link
-			display: inline-block
-			margin-bottom: 0px
+			margin-right: 0
 
 		#facebook-link
-			display: inline-block
 
 @media screen and (max-width: 1080px)
 

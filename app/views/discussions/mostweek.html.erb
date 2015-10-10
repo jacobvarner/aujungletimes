@@ -5,18 +5,18 @@
 		<p class="start-discussion-text"><%= link_to 'Sign In', new_user_session_path %> or <%= link_to 'Sign Up', new_user_registration_path %> to start a discussion</p>
 	<% end %>
 	<div class="discussion-sort">
-		<p>Sort by:</p>
 		<ul class="sort-list">
-			<li class="sort-item"><%= link_to 'Most Recent', discussions_path %></li>
-			<li class="sort-item"><%= link_to 'Top Rated - Today', toptoday_discussions_path %></li>
-			<li class="sort-item"><%= link_to 'Top Rated - Week', topweek_discussions_path %></li>
-			<li class="sort-item"><%= link_to 'Top Rated - Month', topmonth_discussions_path %></li>
-			<li class="sort-item"><%= link_to 'Top Rated - Year', topyear_discussions_path %></li>
-			<li class="sort-item"><%= link_to 'Most Replies - Today', mosttoday_discussions_path %></li>
-			<li class="sort-item"><%= link_to 'Most Replies - Week', mostweek_discussions_path %></li>
-			<li class="sort-item"><%= link_to 'Most Replies - Month', mostmonth_discussions_path %></li>
-			<li class="sort-item"><%= link_to 'Most Replies - Year', mostyear_discussions_path %></li>
+			<li class="sort-item current"><%= link_to 'Most Replies - Week', mostweek_discussions_path %></li>
+			<li class="sort-item other"><%= link_to 'Most Recent', discussions_path %></li>
+			<li class="sort-item other"><%= link_to 'Top Rated - Today', toptoday_discussions_path %></li>
+			<li class="sort-item other"><%= link_to 'Top Rated - Week', topweek_discussions_path %></li>
+			<li class="sort-item other"><%= link_to 'Top Rated - Month', topmonth_discussions_path %></li>
+			<li class="sort-item other"><%= link_to 'Top Rated - Year', topyear_discussions_path %></li>
+			<li class="sort-item other"><%= link_to 'Most Replies - Today', mosttoday_discussions_path %></li>
+			<li class="sort-item other"><%= link_to 'Most Replies - Month', mostmonth_discussions_path %></li>
+			<li class="sort-item other"><%= link_to 'Most Replies - Year', mostyear_discussions_path %></li>
 		</ul>
+		<i id="sort-button" class="material-icons">sort</i>
 	</div>
 	<% @discussions.each do |d| %>
 		<div class="discussion-container">

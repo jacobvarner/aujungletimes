@@ -16,7 +16,7 @@
 			<li class="sort-item other"><%= link_to 'Most Replies - Month', mostmonth_discussions_path %></li>
 			<li class="sort-item other"><%= link_to 'Most Replies - Year', mostyear_discussions_path %></li>
 		</ul>
-		<i class="material-icons">sort</i>
+		<i id="sort-button" class="material-icons">sort</i>
 	</div>
 	<% @discussions.each do |d| %>
 		<div class="discussion-container">
