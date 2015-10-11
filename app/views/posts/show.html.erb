@@ -29,7 +29,9 @@
 		     data-ad-slot="7274919330"
 		     data-ad-format="auto"></ins>
 	</div>
+	<hr/>
 	<div class="post-content"><%=raw Markdown.new(@post.post_content).to_html %></div>
+	<hr/>
 	<div class="post-ad-bottom">
 		<!-- post_ad_bottom -->
 		<ins class="adsbygoogle"
@@ -38,6 +40,7 @@
 		     data-ad-slot="8751652538"
 		     data-ad-format="auto"></ins>
 	</div>
+	<hr/>
 	<h3 class="comment-count"><%= pluralize(@post.comments.count, 'Comment') %></h3>
 	<div class="comments"><%= render @post.comments %>
 	<% if user_signed_in? %>

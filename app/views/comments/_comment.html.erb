@@ -1,12 +1,12 @@
-<div>
-	<div>
+<div class="comment-container">
+	<div class="comment-content">
 		<p><%= comment.body %></p>
-		<div>
-			<p><i class="material-icons">schedule</i>&nbsp;<%= time_ago_in_words(comment.created_at) %> ago</p>
-			<p><i class="material-icons">account_circle</i><strong><%= comment.username %></strong></p>
-		</div>
 	</div>
-	<% if user_signed_in? && (current_user.admin? || current_user.username == comment.username) %>
-		<p><%= link_to 'Delete', [comment.post, comment], method: :delete, data: { confirm: 'Are you sure?' } %></p>
-	<% end %>
+	<div class="comment-info">
+		<span class="comment-date"><i class="material-icons">schedule</i><p><%= time_ago_in_words(comment.created_at) %> ago</p></span>
+		<span class="comment-author"><i class="material-icons">account_circle</i><p><%= comment.username %></p></span>
+		<% if user_signed_in? && (current_user.admin? || current_user.username == comment.username) %>
+			<%= link_to 'Delete', [comment.post, comment], method: :delete, data: { confirm: 'Are you sure?' } %>
+		<% end %>
+	</div>
 </div>
