@@ -1,33 +1,50 @@
 <% @title = @post.post_title %>
 <meta name="description" content="<%= @post.post_description %>">
-<h2><%= @post.post_title %></h2>
-<!-- Post author, date, and category (if it has one) -->
-<div><p><i class="material-icons">account_circle</i>&nbsp;<strong><%= @post.post_author %></strong></p></div>
-<div><p><i class="material-icons">schedule</i>&nbsp;<%= @post.created_at.strftime("%B %e, %Y") %></p></div>
-<% if @post.post_category != nil && @post.post_category != "" %>
-	<div><p><i class="material-icons">turned_in</i>&nbsp;<%= @post.post_category %></p></div>
-<% end %>
-<img src="http://placehold.it/600x400">
-<div>
-	<!-- TODO: replace with social sharing buttons -->
-	<div><p>TWITTER</p></div>
-	<div><p>FACEBOOK</p></div>
-	<div><p>GOOGLE+</p></div>
-</div>
-<!-- TODO: replace with actual Google AdSense ad -->
-<img src="http://placehold.it/860x150">
-<div><%= @post.post_content %></div>
-<!-- if the post belongs to the current user or the current user is an admin, allow for the post to be edited or deleted. -->
-<% if user_signed_in? && (current_user.username == @post.post_author || current_user.admin?) %>
-	<%= link_to 'Edit', edit_post_path(@post) %>
-<% end %>
-<div>
-<h3><%= pluralize(@post.comments.count, 'Comment') %></h3>
-<%= render @post.comments %>
-<% if user_signed_in? %>
-	<h3>Add a comment:</h3>
-	<%= render 'comments/form' %>
-<% else %>
-	<p><%= link_to 'Sign In', new_user_session_path %> or <%= link_to 'Sign Up', new_user_registration_path %> to leave a comment</p>
-<% end %>
+<div class="post-wrapper">
+	<h2 class="post-title"><%= @post.post_title %></h2>
+	<!-- Post author, date, and category (if it has one) -->
+	<div class="post-info">
+		<span class="post-author"><i class="material-icons">account_circle</i><p><%= @post.post_author %></p></span>
+		<span class="post-date"><i class="material-icons">schedule</i><p><%= @post.created_at.strftime("%B %e, %Y") %></p></span>
+		<% if @post.post_category != nil && @post.post_category != "" %>
+			<span class="post-category"><i class="material-icons">turned_in</i><p><%= @post.post_category %></p></span>
+		<% end %>
+		<!-- if the post belongs to the current user or the current user is an admin, allow for the post to be edited or deleted. -->
+		<% if user_signed_in? && (current_user.username == @post.post_author || current_user.admin?) %>
+			<%= link_to 'Edit', edit_post_path(@post) %>
+		<% end %>
+	</div>
+	<img class="post-image" src="http://placehold.it/600x400">
+	<div class="sharing-buttons">
+		<a class="tweet-button" href="https://twitter.com/intent/tweet?url=http://www.aujungletimes.com/posts/<%= @post.slug %>&text=<%= @post.post_title %>&related=TheJungleTimes" target="_blank"><img src="<%= asset_path "logos/twitter.png" %>" height="30px"/><p>Tweet</p></a>
+		<a class="share-button" href="https://www.facebook.com/sharer/sharer.php?u=http://www.aujungletimes.com/posts/<%= @post.slug %>" target="_blank"><img src="<%= asset_path "logos/facebook.png" %>" height="25px"/><p>Share</p></a>
+		<a class="plus-button" href="https://plus.google.com/share?url=http://www.aujungletimes.com/posts/<%= @post.slug %>" target="_blank"><img src="<%= asset_path "logos/googleplus.png" %>" height="35px"/><p>Share</p></a>
+	</div>
+	<hr/>
+	<div class="post-ad-top">
+		<!-- post_ad_top -->
+		<ins class="adsbygoogle"
+		     style="display:block"
+		     data-ad-client="ca-pub-8692643521715142"
+		     data-ad-slot="7274919330"
+		     data-ad-format="auto"></ins>
+	</div>
+	<div class="post-content"><%=raw Markdown.new(@post.post_content).to_html %></div>
+	<div class="post-ad-bottom">
+		<!-- post_ad_bottom -->
+		<ins class="adsbygoogle"
+		     style="display:block"
+		     data-ad-client="ca-pub-8692643521715142"
+		     data-ad-slot="8751652538"
+		     data-ad-format="auto"></ins>
+	</div>
+	<h3 class="comment-count"><%= pluralize(@post.comments.count, 'Comment') %></h3>
+	<div class="comments"><%= render @post.comments %>
+	<% if user_signed_in? %>
+		<h3 class="add-comment">Add a comment:</h3>
+		<%= render 'comments/form' %>
+	<% else %>
+		<p class="comment-sign-in"><%= link_to 'Sign In', new_user_session_path %> or <%= link_to 'Sign Up', new_user_registration_path %> to leave a comment</p>
+	<% end %>
+	</div>
 </div>
