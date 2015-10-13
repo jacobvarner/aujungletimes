@@ -9,31 +9,35 @@
 			</ul>
 		</div>
 	<% end %>
-	<div>
-		<%= f.label :post_title %><br/>
+	<div class="title-field">
+		<%= f.label :post_title %>
 		<%= f.text_field :post_title %>
 	</div>
-	<div>
-		<%= f.label :post_description %><br/>
+	<div class="description-field">
+		<%= f.label :post_description %>
+		<p class="help-text">A short description of the post to help with Search Engine Optimization in the header.</p>
 		<%= f.text_area :post_description %>
 	</div>
-	<div>
-		<%= f.label :post_content %><br/>
+	<div class="content-field">
+		<%= f.label :post_content %>
+		<p class="help-text">You can, and probably should, use <a href="https://help.github.com/articles/markdown-basics/" target="_blank">Markdown</a> to style your post content.</p>
 		<%= f.text_area :post_content %>
 	</div>
-	<div>
-		<%= f.label :category %><br/>
+	<div class="category-field">
+		<%= f.label :category %>
 		<%= f.collection_select :post_category, Category.where(blog: true).order(:category_title), :category_title, :category_title, :include_blank => true %>
 	</div>
-	<div>
-		<%= f.label :post_image %>&nbsp;
+	<div class="image-field">
+		<%= f.label :post_image %>
+		<p class="help-text">Please upload a photo with a 600 x 400 resolution.</p>
 		<%= f.file_field :post_image %>
 	</div>
-	<div>
-		<%= f.label :publish %>&nbsp;
+	<div class="publish-field">
+		<%= f.label :publish %>
+		<p class="help-text">Leave this unchecked if you wish to just save it to work on later.</p>
 		<%= f.check_box :publish %>
 	</div>
-	<div>
+	<div class="submit-field">
 		<%= f.submit %>
 	</div>
 <% end %>

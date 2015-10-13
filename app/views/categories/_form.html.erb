@@ -9,15 +9,15 @@
 			</ul>
 		</div>
 	<% end %>
-	<p>
-		<%= f.label :category_title %><br/>
+	<div class="username-field">
+		<%= f.label :category_title %>
 		<%= f.text_field :category_title %>
-	</p>
-	<p>
-		<%= f.label :blog %><br/>
+	</div>
+	<div class="checkbox-field">
 		<%= f.check_box :blog %>
-	</p>
-	<p>
+		<%= f.label :blog? %>
+	</div>
+	<div class="update-field">
 		<%= f.submit %>
-	</p>
+	</div>
 <% end %>

@@ -9,23 +9,27 @@
 			</ul>
 		</div>
 	<% end %>
-	<div>
-		<%= f.label :title %><br/>
+	<div class="title-field">
+		<%= f.label :title %>
+		<p class="help-text">Give your thread or link a title for other users to see on the main page.</p>
 		<%= f.text_field :title %>
 	</div>
-	<div>
-		<%= f.label "Link (must be preceded by http:// or https://)" %><br/>
+	<div class="link-field">
+		<%= f.label "Link" %>
+		<p class="help-text">Please submit links in a <i>http://www.website.com</i> or <i>https://www.website.com</i> format. The link is not required if you just wish to start your own discussion and won't be adding commentary to another resource online.</p>
 		<%= f.text_field :link %>
 	</div>
-	<div>
-		<%= f.label :content %><br/>
+	<div class="content-field">
+		<%= f.label :content %>
+		<p class="help-text">What do you have to say? Share your own thoughts here and entice the input of other users.</p>
 		<%= f.text_area :content %>
 	</div>
-	<div>
-		<%= f.label :category %><br/>
+	<div class="category-field">
+		<%= f.label :category %>
+		<p class="help-text">What category does your discussion best fit into?</p>
 		<%= f.collection_select :category, Category.where(blog: false).order(:category_title), :category_title, :category_title, :include_blank => true %>
 	</div>
-	<div>
+	<div class="submit-field">
 		<%= f.submit %>
 	</div>
 <% end %>

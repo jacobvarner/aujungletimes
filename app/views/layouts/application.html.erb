@@ -14,45 +14,55 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div class="ad-main-top">
-		<!-- main_top -->
-		<ins class="adsbygoogle"
-		     style="display:block"
-		     data-ad-client="ca-pub-8692643521715142"
-		     data-ad-slot="1162836931"
-		     data-ad-format="auto"></ins>
-	</div>
-	<% if notice %>
-	  <p class="alert alert-success"><%= notice %></p>
-	<% end %>
-	<% if alert %>
-	  <p class="alert alert-danger"><%= alert %></p>
-	<% end %>
-	<h1 class="header-title">The Jungle Times</h1>
-	<div class="header-bar">
-		<nav class="header-navigation">
-			<ul>
-				<li><i class="material-icons">description</i><%= link_to 'Blog', posts_path %></li>
-				<li><i class="material-icons">forum</i><%= link_to 'Forum', discussions_path %></li>
-				<li><i class="material-icons">live_help</i><%= link_to 'About', '/about' %></li>
-				<li><i class="material-icons">email</i><%= link_to 'Contact', '/contact' %></li>
-			</ul>
-		</nav>
-		<div class="header-links">
-			<% if user_signed_in? && (current_user.admin? || current_user.writer?)%>
-				<p>Signed in as <strong><%= current_user.username %></strong> | <%= link_to 'Logout', destroy_user_session_path, :method => :delete %> | <%= link_to 'Edit Profile', edit_user_registration_path %> | <%= link_to 'Posts Panel', panel_path %> | <%= link_to 'New Post', new_post_path %></p>
-			<% elsif user_signed_in? %>
-				<p>Signed in as <strong><%= current_user.username %></strong> | <%= link_to 'Logout', destroy_user_session_path, :method => :delete %> | <%= link_to 'Edit Profile', edit_user_registration_path %></p>
-			<% else %>
-				<span class="not-signed-in"><%= link_to 'Sign In', new_user_session_path %>&nbsp;<%= link_to 'Sign Up', new_user_registration_path %></span>
-			<% end %>
+	<div class="page-wrapper">
+		<div class="ad-main-top">
+			<!-- main_top -->
+			<ins class="adsbygoogle"
+			     style="display:block"
+			     data-ad-client="ca-pub-8692643521715142"
+			     data-ad-slot="1162836931"
+			     data-ad-format="auto"></ins>
 		</div>
-	</div>
-	<div class="social-media-links">
-		<a id="twitter-link" href="http://www.twitter.com/thejungletimes" target="_blank"><img src="<%= asset_path "logos/twitter.png" %>"/><p>TheJungleTimes</p></a><a id="facebook-link" href="http://www.facebook.com/thejungletimes" target="_blank"><img src="<%= asset_path "logos/facebook.png" %>"/><p>TheJungleTimes</p></a>
+		<% if notice %>
+		  <p class="alert alert-success"><%= notice %></p>
+		<% end %>
+		<% if alert %>
+		  <p class="alert alert-danger"><%= alert %></p>
+		<% end %>
+		<h1 class="header-title">The Jungle Times</h1>
+		<div class="header-bar">
+			<nav class="header-navigation">
+				<ul>
+					<li><i class="material-icons">description</i><%= link_to 'Blog', posts_path %></li>
+					<li><i class="material-icons">forum</i><%= link_to 'Forum', discussions_path %></li>
+					<li><i class="material-icons">live_help</i><%= link_to 'About', '/about' %></li>
+					<li><i class="material-icons">email</i><%= link_to 'Contact', '/contact' %></li>
+				</ul>
+			</nav>
+			<div class="header-links">
+				<% if user_signed_in? && (current_user.admin? || current_user.writer?)%>
+					<p>Signed in as <strong><%= current_user.username %></strong> | <%= link_to 'Logout', destroy_user_session_path, :method => :delete %> | <%= link_to 'Edit Profile', edit_user_registration_path %> | <%= link_to 'Posts Panel', panel_path %> | <%= link_to 'New Post', new_post_path %></p>
+				<% elsif user_signed_in? %>
+					<p>Signed in as <strong><%= current_user.username %></strong> | <%= link_to 'Logout', destroy_user_session_path, :method => :delete %> | <%= link_to 'Edit Profile', edit_user_registration_path %></p>
+				<% else %>
+					<span class="not-signed-in"><%= link_to 'Sign In', new_user_session_path %>&nbsp;<%= link_to 'Sign Up', new_user_registration_path %></span>
+				<% end %>
+			</div>
+		</div>
+		<div class="social-media-links">
+			<a id="twitter-link" href="http://www.twitter.com/thejungletimes" target="_blank"><img src="<%= asset_path "logos/twitter.png" %>"/><p>TheJungleTimes</p></a><a id="facebook-link" href="http://www.facebook.com/thejungletimes" target="_blank"><img src="<%= asset_path "logos/facebook.png" %>"/><p>TheJungleTimes</p></a>
+		</div>
+
+		<%= yield %>
+		<div class="push"></div>
 	</div>
 
-<%= yield %>
+	<footer class="site-footer">
+		<div class="footer-wrapper">
+			<p class="footer-text">&copy 2015 The Jungle Times<br/>
+			Site by <a href="http://www.jacobvarner.com/" target="_blank">Jacob Varner</a> | <a href="http://www.twitter.com/TheJungleTimes" target="_blank">Twitter</a> | <a href="http://www.facebook.com/TheJungleTimes" target="_blank">Facebook</a></p>
+		</div>
+	</footer>
 	<!-- Google AdSsense JS -->
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>

@@ -1,12 +1,12 @@
-<div>
-	<div>
-		<p><%= reply.body %></p>
-		<div>
-			<p><i class="material-icons">schedule</i>&nbsp;<%= time_ago_in_words(reply.created_at) %> ago</p>
-			<p><i class="material-icons">account_circle</i><strong><%= reply.username %></strong></p>
+<div class="reply-wrapper">
+	<div class="reply-container">
+		<div class="reply-content"><%= reply.body %></div>
+		<div class="reply-info">
+			<span class="reply-date"><i class="material-icons">schedule</i><p><%= time_ago_in_words(reply.created_at) %> ago</p></span>
+			<span class="reply-author"><i class="material-icons">account_circle</i><p><%= reply.username %></p></span>
+			<% if user_signed_in? && (current_user.admin? || current_user.username == reply.username) %>
+				<%= link_to 'Delete', [reply.discussion, reply], method: :delete, data: { confirm: 'Are you sure?' } %>
+			<% end %>
 		</div>
 	</div>
-	<% if user_signed_in? && (current_user.admin? || current_user.username == reply.username) %>
-		<p><%= link_to 'Delete', [reply.discussion, reply], method: :delete, data: { confirm: 'Are you sure?' } %></p>
-	<% end %>
 </div>

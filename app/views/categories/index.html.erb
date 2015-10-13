@@ -1,26 +1,28 @@
-<h1>Categories</h1>
-<p><%= link_to "New Category", new_category_path %></p>
-<table>
-	<thead>
-		<tr>
-			<td>Category Title</td>
-			<td>Blog or Forum</td>
-			<td>Delete</td>
-		</tr>
-	</thead>
-	<tbody>
-	<% @cats.each do |cat| %>
-		<tr>
-			<td><%= cat.category_title %></td>
-			<td>
-				<% if cat.blog %>
-					Blog
-				<% else %>
-					Forum
-				<% end %>
-			</td>
-			<td><%= link_to 'Delete', destroy_category_path(cat), method: :delete, data: { confirm: 'Are you sure you wish to delete this category?'} %></td>
-		</tr>
-	<% end %>
-	</tbody>
-</table>
+<div class="category-page-wrapper">
+	<h1 class="category-page-title">Categories</h1>
+	<div class="category-link"><%= link_to "New Category", new_category_path %></div>
+	<table>
+		<thead>
+			<tr>
+				<td>Category Title</td>
+				<td>B or F</td>
+				<td>Delete</td>
+			</tr>
+		</thead>
+		<tbody>
+		<% @cats.each do |cat| %>
+			<tr>
+				<td><%= cat.category_title %></td>
+				<td>
+					<% if cat.blog %>
+						Blog
+					<% else %>
+						Forum
+					<% end %>
+				</td>
+				<td><%= link_to 'Delete', destroy_category_path(cat), method: :delete, data: { confirm: 'Are you sure you wish to delete this category?'} %></td>
+			</tr>
+		<% end %>
+		</tbody>
+	</table>
+</div>

@@ -1,32 +1,43 @@
 <% @title = @discussion.title %>
 <meta name="description" content="<%= @discussion.content %>">
-<h2><%= link_to @discussion.title, "#{@discussion.link}", target: "_blank" %></h2>
-<!-- Post author, date, and category (if it has one) -->
-<div><p><i class="material-icons">account_circle</i>&nbsp;<strong><%= @discussion.creator %></strong></p></div>
-<div><p><i class="material-icons">schedule</i>&nbsp;<%= @discussion.created_at.strftime("%B %e, %Y") %></p></div>
-<% if @discussion.category != nil && @discussion.category != "" %>
-	<div><p><i class="material-icons">turned_in</i>&nbsp;<%= @discussion.category %></p></div>
-<% end %>
-<!-- if the post belongs to the current user or the current user is an admin, allow for the post to be edited -->
-<% if user_signed_in? && (current_user.username == @discussion.creator || current_user.admin?) %>
-	<%= link_to 'Edit', edit_discussion_path(@discussion) %>
-<% end %>
-<p><%= @discussion.content %></p>
-<div>
-	<!-- TODO: replace with social sharing buttons -->
-	<div><p>TWITTER</p></div>
-	<div><p>FACEBOOK</p></div>
-	<div><p>GOOGLE+</p></div>
-</div>
-<!-- TODO: replace with actual Google AdSense ad -->
-<img src="http://placehold.it/860x150">
-<div>
-<h3><%= pluralize(@discussion.replies.count, 'Reply') %></h3>
-<%= render @discussion.replies %>
-<% if user_signed_in? %>
-	<h3>Reply to this discussion:</h3>
-	<%= render 'replies/form' %>
-<% else %>
-	<p><%= link_to 'Sign In', new_user_session_path %> or <%= link_to 'Sign Up', new_user_registration_path %> to leave a reply</p>
-<% end %>
+<div class="discussion-wrapper">
+	<h2 class="discussion-title"><%= link_to @discussion.title, "#{@discussion.link}", target: "_blank" %></h2>
+	<!-- Post author, date, and category (if it has one) -->
+	<div class="discussion-info-view">
+		<span class="discussion-creator"><i class="material-icons">account_circle</i><p><%= @discussion.creator %></p></span>
+		<span class="discussion-date"><i class="material-icons">schedule</i><p><%= @discussion.created_at.strftime("%B %e, %Y") %></p></span>
+		<% if @discussion.category != nil && @discussion.category != "" %>
+			<span class="discussion-category"><i class="material-icons">turned_in</i><p><%= @discussion.category %></p></span>
+		<% end %>
+		<!-- if the post belongs to the current user or the current user is an admin, allow for the post to be edited or deleted. -->
+		<% if user_signed_in? && (current_user.username == @discussion.creator || current_user.admin?) %>
+			<%= link_to 'Edit', edit_post_path(@discussion) %>
+		<% end %>
+	</div>
+	<div class="sharing-buttons-view">
+		<a class="tweet-button" href="https://twitter.com/intent/tweet?url=http://www.aujungletimes.com/discussions/<%= @discussion.slug %>&text=<%= @discussion.title %>&related=TheJungleTimes" target="_blank"><img src="<%= asset_path "logos/twitter.png" %>" height="30px"/><p>Tweet</p></a>
+		<a class="share-button" href="https://www.facebook.com/sharer/sharer.php?u=http://www.aujungletimes.com/discussions/<%= @discussion.slug %>" target="_blank"><img src="<%= asset_path "logos/facebook.png" %>" height="25px"/><p>Share</p></a>
+		<a class="plus-button" href="https://plus.google.com/share?url=http://www.aujungletimes.com/discussions/<%= @discussion.slug %>" target="_blank"><img src="<%= asset_path "logos/googleplus.png" %>" height="35px"/><p>Share</p></a>
+	</div>
+	<hr/>
+	<div class="discussion-content"><%=raw Markdown.new(@discussion.content).to_html %></div>
+	<hr/>
+	<div class="discussion-ad">
+		<!-- discussion_ad_top -->
+		<ins class="adsbygoogle"
+		     style="display:block"
+		     data-ad-client="ca-pub-8692643521715142"
+		     data-ad-slot="1226555731"
+		     data-ad-format="auto"></ins>
+	</div>
+	<div class="comment-wrapper">
+		<h3 class="comment-count"><%= pluralize(@discussion.replies.count, 'Reply') %></h3>
+		<%= render @discussion.replies %>
+		<% if user_signed_in? %>
+			<h3 class="add-reply">Reply to this discussion:</h3>
+			<%= render 'replies/form' %>
+		<% else %>
+			<p class="comment-sign-in"><%= link_to 'Sign In', new_user_session_path %> or <%= link_to 'Sign Up', new_user_registration_path %> to leave a reply</p>
+		<% end %>
+	</div>
 </div>

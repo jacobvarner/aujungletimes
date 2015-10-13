@@ -1,38 +1,42 @@
-<h1>All Posts</h1>
-<p><%= link_to 'New Post', new_post_path %></p>
-<p><%= link_to 'Manage Categories', categories_path %></p>
-<table>
-	<thead>
-		<td>Post Title</td>
-		<td>Writer</td>
-		<td>Date</td>
-		<td>Comments</td>
-		<td>Edit</td>
-		<td>Delete</td>
-	</thead>
-	<tbody>
-	<% @posts.each do |post| %>
-		<tr>
-			<td><%= link_to post.post_title, post_path(post) %></td>
-			<td><%= post.post_author %></td>
-			<td><%= post.created_at.strftime("%B %e, %Y") %></td>
-			<td><%= post.comments.count %></td>
-			<td>
-				<% if current_user.admin? || (current_user.username == post.post_author) %>
-					<%= link_to "Edit", edit_post_path(post) %>
-				<% else %>
-					N/A
-				<% end %>
-			</td>
-			<td>
-				<% if current_user.admin? %>
-					<%= link_to 'Delete', post_path(post), method: :delete, data: { confirm: 'Are you sure you wish to delete this post?'} %>
-				<% else %>
-					N/A
-				<% end %>
-			</td>
-		</tr>
-	<% end %>
-	</tbody>
-</table>
-<div><%= will_paginate @posts %></div>
+<div class="post-panel-wrapper">
+	<h1 class="post-panel-title">All Posts</h1>
+	<div class="admin-links">
+		<%= link_to 'New Post', new_post_path %>
+		<%= link_to 'Manage Categories', categories_path %>
+	</div>
+	<table class="post-panel-table">
+		<thead>
+			<td>Post Title</td>
+			<td>Writer</td>
+			<td>Date</td>
+			<td>Comments</td>
+			<td>Edit</td>
+			<td>Delete</td>
+		</thead>
+		<tbody>
+		<% @posts.each do |post| %>
+			<tr>
+				<td><%= link_to post.post_title, post_path(post) %></td>
+				<td><%= post.post_author %></td>
+				<td><%= post.created_at.strftime("%B %e, %Y") %></td>
+				<td><%= post.comments.count %></td>
+				<td>
+					<% if current_user.admin? || (current_user.username == post.post_author) %>
+						<%= link_to "Edit", edit_post_path(post) %>
+					<% else %>
+						N/A
+					<% end %>
+				</td>
+				<td>
+					<% if current_user.admin? %>
+						<%= link_to 'Delete', post_path(post), method: :delete, data: { confirm: 'Are you sure you wish to delete this post?'} %>
+					<% else %>
+						N/A
+					<% end %>
+				</td>
+			</tr>
+		<% end %>
+		</tbody>
+	</table>
+	<%= will_paginate @posts %>
+</div>
