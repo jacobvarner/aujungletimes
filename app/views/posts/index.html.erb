@@ -14,7 +14,11 @@
 			</div>
 			<div class="post-content">
 				<h2 class="post-title"><%= link_to post.post_title, post %></h2>
-				<img class="post-image" src="http://placehold.it/600x400">
+				<% if post.post_image.url(:large) == nil || post.post_image.url(:large) == '' || post.post_image.url(:large) == '/post_images/large/missing.png' %>
+					<img class="post-image" src="http://www.placehold.it/600x400"/>
+				<% else %>
+					<%= image_tag post.post_image.url(:large), class: 'post-image' %>
+				<% end %>
 				<div class="post-info">
 					<span class="post-author"><i class="material-icons">account_circle</i><p><%= post.post_author %></p></span>
 					<span class="post-date"><i class="material-icons">schedule</i><p><%= post.created_at.strftime("%b. %e, %Y") %></p></span>

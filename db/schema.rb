@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151008214446) do
+ActiveRecord::Schema.define(version: 20151014034011) do
 
   create_table "add_slug_to_blogs", force: :cascade do |t|
     t.string   "slug"
@@ -77,16 +77,19 @@ ActiveRecord::Schema.define(version: 20151008214446) do
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
 
   create_table "posts", force: :cascade do |t|
-    t.string   "post_title",                                  null: false
-    t.string   "post_author",                                 null: false
-    t.text     "post_description", default: "No Description"
+    t.string   "post_title",                                         null: false
+    t.string   "post_author",                                        null: false
+    t.text     "post_description",        default: "No Description"
     t.text     "post_content"
-    t.string   "post_image"
     t.string   "post_category"
-    t.boolean  "publish",          default: false
-    t.datetime "created_at",                                  null: false
-    t.datetime "updated_at",                                  null: false
+    t.boolean  "publish",                 default: false
+    t.datetime "created_at",                                         null: false
+    t.datetime "updated_at",                                         null: false
     t.string   "slug"
+    t.string   "post_image_file_name"
+    t.string   "post_image_content_type"
+    t.integer  "post_image_file_size"
+    t.datetime "post_image_updated_at"
   end
 
   create_table "replies", force: :cascade do |t|

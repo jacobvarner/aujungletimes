@@ -14,7 +14,11 @@
 			<%= link_to 'Edit', edit_post_path(@post) %>
 		<% end %>
 	</div>
-	<img class="post-image" src="http://placehold.it/600x400">
+	<% if @post.post_image.url(:large) == '/post_images/large/missing.png' || @post.post_image.url(:large) == '' || @post.post_image.url(:large) == nil %>
+		<img class="post-image" src="http://www.placehold.it/600x400"/>
+	<% else %>
+		<%= image_tag @post.post_image.url(:large), class: 'post-image' %>
+	<% end %>
 	<div class="sharing-buttons">
 		<a class="tweet-button" href="https://twitter.com/intent/tweet?url=http://www.aujungletimes.com/posts/<%= @post.slug %>&text=<%= @post.post_title %>&related=TheJungleTimes" target="_blank"><img src="<%= asset_path "logos/twitter.png" %>" height="30px"/><p>Tweet</p></a>
 		<a class="share-button" href="https://www.facebook.com/sharer/sharer.php?u=http://www.aujungletimes.com/posts/<%= @post.slug %>" target="_blank"><img src="<%= asset_path "logos/facebook.png" %>" height="25px"/><p>Share</p></a>
