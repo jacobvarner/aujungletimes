@@ -15,14 +15,6 @@
 </head>
 <body>
 	<div class="page-wrapper">
-		<div class="ad-main-top">
-			<!-- main_top -->
-			<ins class="adsbygoogle"
-			     style="display:block"
-			     data-ad-client="ca-pub-8692643521715142"
-			     data-ad-slot="1162836931"
-			     data-ad-format="auto"></ins>
-		</div>
 		<% if notice %>
 		  <p class="alert alert-success"><%= notice %></p>
 		<% end %>
@@ -49,14 +41,29 @@
 				<% end %>
 			</div>
 		</div>
+		<div class="ad-main-top">
+			<!-- main_top -->
+			<ins class="adsbygoogle"
+			     style="display:block"
+			     data-ad-client="ca-pub-8692643521715142"
+			     data-ad-slot="1162836931"
+			     data-ad-format="auto"></ins>
+		</div>
 		<div class="social-media-links">
 			<a id="twitter-link" href="http://www.twitter.com/thejungletimes" target="_blank"><img src="<%= asset_path "logos/twitter.png" %>"/><p>TheJungleTimes</p></a><a id="facebook-link" href="http://www.facebook.com/thejungletimes" target="_blank"><img src="<%= asset_path "logos/facebook.png" %>"/><p>TheJungleTimes</p></a>
 		</div>
 
 		<%= yield %>
 		<div class="push"></div>
+		<div class="ad-main-top">
+			<!-- main_top -->
+			<ins class="adsbygoogle"
+			     style="display:block"
+			     data-ad-client="ca-pub-8692643521715142"
+			     data-ad-slot="1162836931"
+			     data-ad-format="auto"></ins>
+		</div>
 	</div>
-
 	<footer class="site-footer">
 		<div class="footer-wrapper">
 			<p class="footer-text">&copy 2015 The Jungle Times<br/>
