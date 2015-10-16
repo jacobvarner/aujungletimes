@@ -17,6 +17,7 @@ class PostsController < ApplicationController
 		if current_user.writer? || current_user.admin?
 			@post = Post.new(post_params)
 			@post.post_author = current_user.username
+			@post.created_at = Time.now + Time.zone_offset('CDT')
 			
 			if @post.save
 				redirect_to @post

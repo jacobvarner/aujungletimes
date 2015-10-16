@@ -3,6 +3,7 @@ class RepliesController < ApplicationController
 		@discussion = Discussion.friendly.find(params[:discussion_id])
 		@reply = @discussion.replies.create(params[:reply].permit(:username, :body))
 		@discussion.reply_count = @discussion.replies.count
+		@reply.created_at = Time.now + Time.zone_offset('CDT')
 
 		redirect_to discussion_path(@discussion)
 	end

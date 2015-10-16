@@ -2,6 +2,7 @@ class CommentsController < ApplicationController
 	def create
 		@post = Post.friendly.find(params[:post_id])
 		@comment = @post.comments.create(params[:comment].permit(:username, :body))
+		@comment.created_at = Time.now + Time.zone_offset('CDT')
 
 		redirect_to post_path(@post)
 	end

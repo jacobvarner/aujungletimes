@@ -6,49 +6,49 @@ class DiscussionsController < ApplicationController
 		end
 
 		def toptoday
-			@datehigh = Time.now
+			@datehigh = Time.now + Time.zone_offset('CDT')
 			@datelow = @datehigh - (86400)
 			@discussions = Discussion.where(:created_at => @datelow..@datehigh).paginate(:page => params[:page], per_page: 20).order('score DESC, created_at DESC')
 		end
 
 		def topweek
-			@datehigh = Time.now
+			@datehigh = Time.now + Time.zone_offset('CDT')
 			@datelow = @datehigh - (86400*7)
 			@discussions = Discussion.where(:created_at => @datelow..@datehigh).paginate(:page => params[:page], per_page: 20).order('score DESC, created_at DESC')
 		end
 
 		def topmonth
-			@datehigh = Time.now
+			@datehigh = Time.now + Time.zone_offset('CDT')
 			@datelow = @datehigh - (86400*31)
 			@discussions = Discussion.where(:created_at => @datelow..@datehigh).paginate(:page => params[:page], per_page: 20).order('score DESC, created_at DESC')
 		end
 
 		def topyear
-			@datehigh = Time.now
+			@datehigh = Time.now + Time.zone_offset('CDT')
 			@datelow = @datehigh - (86400*365)
 			@discussions = Discussion.where(:created_at => @datelow..@datehigh).paginate(:page => params[:page], per_page: 20).order('score DESC, created_at DESC')
 		end
 
 		def mosttoday
-			@datehigh = Time.now
+			@datehigh = Time.now + Time.zone_offset('CDT')
 			@datelow = @datehigh - (86400)
 			@discussions = Discussion.where(:created_at => @datelow..@datehigh).paginate(:page => params[:page], per_page: 20).order('reply_count DESC, created_at DESC')
 		end
 
 		def mostweek
-			@datehigh = Time.now
+			@datehigh = Time.now + Time.zone_offset('CDT')
 			@datelow = @datehigh - (86400*7)
 			@discussions = Discussion.where(:created_at => @datelow..@datehigh).paginate(:page => params[:page], per_page: 20).order('reply_count DESC, created_at DESC')
 		end
 
 		def mostmonth
-			@datehigh = Time.now
+			@datehigh = Time.now + Time.zone_offset('CDT')
 			@datelow = @datehigh - (86400*31)
 			@discussions = Discussion.where(:created_at => @datelow..@datehigh).paginate(:page => params[:page], per_page: 20).order('reply_count DESC, created_at DESC')
 		end
 
 		def mostyear
-			@datehigh = Time.now
+			@datehigh = Time.now + Time.zone_offset('CDT')
 			@datelow = @datehigh - (86400*365)
 			@discussions = Discussion.where(:created_at => @datelow..@datehigh).paginate(:page => params[:page], per_page: 20).order('reply_count DESC, created_at DESC')
 		end
@@ -60,6 +60,7 @@ class DiscussionsController < ApplicationController
 		def create
 			@discussion = Discussion.new(discussion_params)
 			@discussion.creator = current_user.username
+			@discussion.created_at = Time.now + Time.zone_offset('CDT')
 
 			if @discussion.save
 				redirect_to @discussion

@@ -2,7 +2,7 @@
 <meta name="description" content="<%= @discussion.content %>">
 <div class="discussion-wrapper">
 	<h2 class="discussion-title">
-		<% if @discussion.link != nil || @discussion.link != blank %>
+		<% if @discussion.link != nil || @discussion.link != '' %>
 			<%= link_to @discussion.title, "#{@discussion.link}", target: "_blank" %>
 		<% else %>
 			<%= link_to @discussion.title, "http://www.aujungletimes.com/discussions/#{@discussion.slug}" %>
@@ -17,7 +17,7 @@
 		<% end %>
 		<!-- if the post belongs to the current user or the current user is an admin, allow for the post to be edited or deleted. -->
 		<% if user_signed_in? && (current_user.username == @discussion.creator || current_user.admin?) %>
-			<%= link_to 'Edit', edit_post_path(@discussion) %>
+			<%= link_to 'Edit', edit_discussion_path(@discussion) %>
 		<% end %>
 	</div>
 	<div class="sharing-buttons-view">
@@ -35,6 +35,9 @@
 		     data-ad-client="ca-pub-8692643521715142"
 		     data-ad-slot="1226555731"
 		     data-ad-format="auto"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
 	</div>
 	<div class="comment-wrapper">
 		<h3 class="comment-count"><%= pluralize(@discussion.replies.count, 'Reply') %></h3>
