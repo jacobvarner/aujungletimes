@@ -6,5 +6,7 @@ class Discussion < ActiveRecord::Base
 	friendly_id :title, use: :slugged
 
 	validates_uniqueness_of :title
-	validates_format_of :link, :with => URI.regexp(['http', 'https'])
+	if :link != '' || :link != nil
+		validates_format_of :link, :with => URI.regexp(['http', 'https'])
+	end
 end
