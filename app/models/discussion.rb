@@ -5,8 +5,5 @@ class Discussion < ActiveRecord::Base
 	extend FriendlyId
 	friendly_id :title, use: :slugged
 
-	validates_uniqueness_of :title
-	if :link != '' || :link != nil
-		validates_format_of :link, :with => URI.regexp(['http', 'https'])
-	end
+	validates :link, :url => {allow_blank => true, allow_nil => true}
 end

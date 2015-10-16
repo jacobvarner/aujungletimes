@@ -42,6 +42,8 @@ gem 'normalize-rails'
 
 gem 'redcarpet'
 
+gem 'validate_url'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
