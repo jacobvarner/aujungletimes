@@ -47,6 +47,7 @@ Rails.application.routes.draw do
 
   get '/about' => 'pages#about'
   get '/contact' => 'pages#contact'
+  get '/schedule' => 'pages#schedule'
 
   get '/panel' => 'posts#panel', :as => 'panel'
 
