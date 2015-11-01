@@ -73,3 +73,41 @@ table
 				a, a:hover, a:visited, a:active
 					text-decoration: none
 					color: #dd550c
+
+.stats-table-title
+	margin: 10px 0 5px
+
+.stats
+	width: 100%
+	overflow: scroll
+	
+.stats-table
+	width: 900px
+	font-family: 'Open Sans', sans-serif
+	font-size: 12px
+	border: 2px solid #dd550c
+
+	thead
+		font-weight: bold
+		font-family: 'Roboto', sans-serif
+		font-size: 14px
+		border: none
+		text-align: center
+
+		th
+			border: 2px solid #dd550c
+			padding: 5px
+		th:hover
+			background: #dd550c
+			cursor: default
+
+	tbody
+		tr
+			&:hover
+				background: #cccccc
+			td
+				padding: 5px
+				text-align: right
+				border: 1px solid #dd550c
+			td.alt
+				text-align: left

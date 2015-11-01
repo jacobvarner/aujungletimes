@@ -7,4 +7,7 @@ class PagesController < ApplicationController
 
 	def schedule
 	end
+
+	def stats
+	end
 end
