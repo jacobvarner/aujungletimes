@@ -13,26 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20151014034011) do
 
-  create_table "add_slug_to_blogs", force: :cascade do |t|
-    t.string   "slug"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "bootsy_image_galleries", force: :cascade do |t|
-    t.integer  "bootsy_resource_id"
-    t.string   "bootsy_resource_type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "bootsy_images", force: :cascade do |t|
-    t.string   "image_file"
-    t.integer  "image_gallery_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "categories", force: :cascade do |t|
     t.string   "category_title"
     t.boolean  "blog",           default: true
@@ -81,6 +61,7 @@ ActiveRecord::Schema.define(version: 20151014034011) do
     t.string   "post_author",                                        null: false
     t.text     "post_description",        default: "No Description"
     t.text     "post_content"
+    t.string   "post_image"
     t.string   "post_category"
     t.boolean  "publish",                 default: false
     t.datetime "created_at",                                         null: false
@@ -120,7 +101,7 @@ ActiveRecord::Schema.define(version: 20151014034011) do
     t.string   "last_name"
     t.string   "twitter"
     t.string   "permission",             default: "user"
-    t.datetime "join_date",              default: '2015-09-30 03:33:58'
+    t.datetime "join_date",              default: '2015-11-01 16:53:59'
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
