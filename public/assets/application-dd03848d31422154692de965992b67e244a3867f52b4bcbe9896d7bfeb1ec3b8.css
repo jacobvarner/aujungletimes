@@ -1,0 +1,3222 @@
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+/* line 9, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+/* line 19, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+/* line 33, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+/* line 54, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 67, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+/* line 77, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 89, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+/* line 98, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+/* line 110, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+/* line 118, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+/* line 127, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+/* line 136, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 145, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 154, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 162, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 170, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+sup {
+  top: -0.5em;
+}
+
+/* line 174, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+/* line 185, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+/* line 193, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+/* line 204, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 212, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+/* line 221, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+/* line 229, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+/* line 252, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+/* line 266, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+/* line 277, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 290, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 302, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 311, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 322, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+/* line 334, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+/* line 346, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+/* line 356, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+/* line 367, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 376, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 387, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+/* line 396, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+/* line 405, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 416, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 421, /Library/Ruby/Gems/2.0.0/gems/normalize-rails-3.0.3/vendor/assets/stylesheets/normalize-rails/normalize.css */
+td,
+th {
+  padding: 0;
+}
+/* This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *
+ *
+ *
+ *
+ */
+/* line 20, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+* {
+  margin: 0;
+}
+
+/* line 23, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+html, body {
+  height: 100%;
+}
+
+/* line 26, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.header-title {
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 96px;
+  color: #dd550c;
+  margin: 20px;
+}
+
+/* line 33, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.header-bar {
+  width: 100%;
+  background: #03244d;
+  height: 50px;
+}
+/* line 38, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.header-bar .header-links {
+  float: right;
+  margin-right: 30px;
+}
+/* line 42, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.header-bar .header-links p {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  margin: 15px 20px;
+}
+/* line 48, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.header-bar .header-links a, .header-bar .header-links a:visited, .header-bar .header-links a:hover, .header-bar .header-links a:active {
+  color: #dd550c;
+  text-decoration: none;
+}
+/* line 54, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.header-bar .header-links .not-signed-in a, .header-bar .header-links .not-signed-in a:visited {
+  display: inline-block;
+  font-size: 14px;
+  padding: 5px 20px;
+  margin: 10px 0px 10px 20px;
+  border: 2px solid white;
+  text-decoration: none;
+  background: #dd550c;
+  color: white;
+}
+/* line 64, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.header-bar .header-links .not-signed-in a:hover, .header-bar .header-links .not-signed-in a:active {
+  background: #f68026;
+}
+/* line 67, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.header-bar .header-navigation {
+  float: left;
+  margin-left: 20px;
+}
+/* line 71, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.header-bar .header-navigation ul {
+  margin: 0;
+  padding-left: 0px;
+}
+/* line 75, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.header-bar .header-navigation ul li {
+  height: 50px;
+  margin: 0;
+  display: inline-block;
+}
+/* line 81, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.header-bar .header-navigation ul li i {
+  display: inline-flex;
+  vertical-align: middle;
+  color: white;
+  margin: 10px 10px;
+  font-size: 30px;
+}
+/* line 88, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.header-bar .header-navigation ul li a, .header-bar .header-navigation ul li a:visited {
+  display: inline-flex;
+  vertical-align: middle;
+  color: white;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  margin-left: 0px;
+  margin-right: 10px;
+}
+/* line 98, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.header-bar .header-navigation ul li a:hover, .header-bar .header-navigation ul li a:active {
+  color: #dd550c;
+}
+
+/* line 101, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.ad-main-top {
+  height: 90px;
+  width: 970px;
+  margin: 20px auto;
+}
+
+/* line 106, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.social-media-links {
+  width: 330px;
+  height: 30px;
+  margin: 20px auto;
+}
+/* line 111, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.social-media-links #twitter-link {
+  display: inline-block;
+  width: 160px;
+  height: 30px;
+  background: #55acee;
+  margin-right: 10px;
+  overflow: hidden;
+}
+/* line 119, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.social-media-links #twitter-link img {
+  height: 20px;
+  margin: 5px 5px;
+  float: left;
+  display: inline-flex;
+}
+/* line 125, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.social-media-links #twitter-link p {
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  float: left;
+  margin: 4px 5px;
+}
+/* line 133, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.social-media-links #facebook-link {
+  display: inline-block;
+  width: 160px;
+  height: 30px;
+  background: #3b5998;
+  overflow: hidden;
+}
+/* line 140, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.social-media-links #facebook-link img {
+  height: 20px;
+  margin: 5px 7px;
+  float: left;
+  display: inline-flex;
+}
+/* line 146, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.social-media-links #facebook-link p {
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  float: left;
+  margin: 4px 5px;
+}
+
+@media screen and (max-width: 970px) {
+  /* line 155, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+  .ad-main-top {
+    width: 728px;
+  }
+}
+@media screen and (max-width: 728px) {
+  /* line 160, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+  .ad-main-top {
+    width: 100%;
+    height: initial;
+  }
+}
+@media screen and (max-width: 390px) {
+  /* line 166, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+  .social-media-links {
+    width: 320px;
+    margin: 20px auto;
+    height: 30px;
+    overflow: hidden;
+    float: initial;
+  }
+  /* line 173, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+  .social-media-links #twitter-link {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 1080px) {
+  /* line 180, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+  .header-title {
+    font-size: 36px;
+    margin: 10px;
+  }
+
+  /* line 184, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+  .header-bar {
+    height: 80px;
+  }
+  /* line 187, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+  .header-bar .header-links {
+    float: initial;
+    text-align: center;
+    white-space: nowrap;
+    overflow: scroll;
+    margin: 0 10px;
+  }
+  /* line 194, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+  .header-bar .header-links p {
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    margin: 5px 0 15px;
+  }
+  /* line 200, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+  .header-bar .header-links a, .header-bar .header-links a:visited, .header-bar .header-links a:hover, .header-bar .header-links a:active {
+    color: #dd550c;
+    text-decoration: none;
+  }
+  /* line 206, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+  .header-bar .header-links .not-signed-in a, .header-bar .header-links .not-signed-in a:visited {
+    margin: 5px 10px;
+  }
+  /* line 209, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+  .header-bar .header-navigation {
+    float: initial;
+    width: 320px;
+    margin: 0 auto;
+  }
+  /* line 214, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+  .header-bar .header-navigation ul {
+    margin: 0;
+    padding-left: 0px;
+  }
+  /* line 218, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+  .header-bar .header-navigation ul li {
+    height: 40px;
+    margin: 0;
+    display: inline-block;
+  }
+  /* line 224, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+  .header-bar .header-navigation ul li i {
+    margin: 11px 5px;
+    font-size: 18px;
+  }
+  /* line 228, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+  .header-bar .header-navigation ul li a, .header-bar .header-navigation ul li a:visited {
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    margin-left: 0px;
+    margin-right: 5px;
+  }
+  /* line 235, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+  .header-bar .header-navigation ul li a:hover, .header-bar .header-navigation ul li a:active {
+    color: #dd550c;
+  }
+}
+/* line 238, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.edit-profile-wrapper {
+  width: 900px;
+  margin: 20px auto;
+  clear: both;
+}
+/* line 243, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.edit-profile-wrapper .help-text {
+  margin: 10px 0;
+  width: 90%;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+}
+/* line 249, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.edit-profile-wrapper .edit-profile-title {
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  color: #03244d;
+}
+/* line 255, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.edit-profile-wrapper .username-field input {
+  border: 2px solid #dd550c;
+  height: 30px;
+  width: 280px;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+/* line 265, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.edit-profile-wrapper .email-field input {
+  border: 2px solid #dd550c;
+  height: 30px;
+  width: 280px;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+/* line 275, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.edit-profile-wrapper .firstname-field input {
+  border: 2px solid #dd550c;
+  height: 30px;
+  width: 280px;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+/* line 285, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.edit-profile-wrapper .lastname-field input {
+  border: 2px solid #dd550c;
+  height: 30px;
+  width: 280px;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+/* line 295, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.edit-profile-wrapper .twitter-field input {
+  border: 2px solid #dd550c;
+  height: 30px;
+  width: 244px;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+/* line 304, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.edit-profile-wrapper .twitter-field h3 {
+  display: inline;
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin-right: 5px;
+}
+/* line 312, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.edit-profile-wrapper .password-field input {
+  border: 2px solid #dd550c;
+  height: 30px;
+  width: 280px;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+/* line 321, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.edit-profile-wrapper .checkbox-field {
+  display: inline;
+}
+/* line 323, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.edit-profile-wrapper .checkbox-field input {
+  display: inline;
+}
+/* line 325, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.edit-profile-wrapper .checkbox-field label {
+  display: inline;
+  font-weight: normal;
+}
+/* line 330, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.edit-profile-wrapper .update-field input[type="submit"] {
+  width: 150px;
+  height: 40px;
+  font-size: 18px;
+  background: #dd550c;
+  border: 2px solid #dd550c;
+  color: white;
+  margin: 20px 0;
+}
+/* line 339, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.edit-profile-wrapper a, .edit-profile-wrapper a:hover, .edit-profile-wrapper a:visited, .edit-profile-wrapper a:active {
+  margin: 10px 0;
+  line-height: 2;
+  color: #dd550c;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 920px) {
+  /* line 347, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+  .edit-profile-wrapper {
+    width: 95%;
+    margin-left: 10px;
+  }
+}
+/* line 351, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.page-wrapper {
+  min-height: 100%;
+  margin-bottom: -80px;
+}
+
+/* line 355, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.page-wrapper:after {
+  content: "";
+  display: block;
+}
+
+/* line 359, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.site-footer, .page-wrapper:after {
+  width: 100%;
+  display: block;
+  height: 80px;
+}
+
+/* line 364, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.site-footer {
+  background: #03244d;
+  overflow: hidden;
+}
+/* line 368, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.site-footer .footer-wrapper {
+  display: block;
+  width: 300px;
+  margin: 20px auto;
+}
+/* line 373, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.site-footer .footer-wrapper .footer-text {
+  text-align: center;
+  color: white;
+  font-family: "Open Sane", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+/* line 380, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/application.sass */
+.site-footer .footer-wrapper .footer-text a, .site-footer .footer-wrapper .footer-text a:hover, .site-footer .footer-wrapper .footer-text a:visited, .site-footer .footer-wrapper .footer-text a:active {
+  color: #dd550c;
+  text-decoration: none;
+}
+/* line 5, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/categories.sass */
+.category-page-wrapper {
+  width: 300px;
+  margin: 20px auto;
+  clear: both;
+}
+/* line 10, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/categories.sass */
+.category-page-wrapper .category-page-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  color: #03244d;
+  text-align: center;
+  margin: 10px;
+}
+/* line 18, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/categories.sass */
+.category-page-wrapper .category-link a, .category-page-wrapper .category-link a:visited {
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: white;
+  background: #dd550c;
+  border: 2px solid #dd550c;
+  text-decoration: none;
+  padding: 10px;
+  width: 115px;
+  margin: 20px auto;
+}
+/* line 31, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/categories.sass */
+.category-page-wrapper .category-link a:hover, .category-page-wrapper .category-link a:active {
+  background: #f68026;
+}
+/* line 34, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/categories.sass */
+.category-page-wrapper table {
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  border: 4px solid #dd550c;
+}
+/* line 40, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/categories.sass */
+.category-page-wrapper table thead {
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  border: 4px solid #dd550c;
+}
+/* line 46, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/categories.sass */
+.category-page-wrapper table thead td {
+  padding: 10px;
+  border: 4px solid #dd550c;
+}
+/* line 52, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/categories.sass */
+.category-page-wrapper table tbody tr:hover {
+  background: #cccccc;
+}
+/* line 54, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/categories.sass */
+.category-page-wrapper table tbody tr td {
+  padding: 5px 10px;
+  border: 2px solid #dd550c;
+}
+/* line 58, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/categories.sass */
+.category-page-wrapper table tbody tr td a, .category-page-wrapper table tbody tr td a:hover, .category-page-wrapper table tbody tr td a:visited, .category-page-wrapper table tbody tr td a:active {
+  text-decoration: none;
+  color: #dd550c;
+}
+/* line 5, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/comments.sass */
+.comment-container {
+  margin: 20px 0px;
+  background: #eeeeee;
+  border: 2px solid #cccccc;
+}
+/* line 10, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/comments.sass */
+.comment-container .comment-content {
+  margin: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+}
+/* line 16, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/comments.sass */
+.comment-container .comment-info {
+  display: inline-block;
+  margin: 0px 20px 20px 20px;
+  height: 24px;
+  overflow: hidden;
+}
+/* line 22, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/comments.sass */
+.comment-container .comment-info .comment-date {
+  display: inline;
+  float: left;
+  height: 24px;
+  margin-right: 20px;
+}
+/* line 28, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/comments.sass */
+.comment-container .comment-info .comment-date i {
+  display: inline-flex;
+  font-size: 24px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+/* line 34, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/comments.sass */
+.comment-container .comment-info .comment-date p {
+  display: inline-flex;
+  font-size: 16px;
+  margin: 0;
+  vertical-align: middle;
+}
+/* line 40, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/comments.sass */
+.comment-container .comment-info .comment-author {
+  display: inline;
+  float: left;
+  height: 24px;
+  margin-right: 20px;
+}
+/* line 46, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/comments.sass */
+.comment-container .comment-info .comment-author i {
+  display: inline-flex;
+  font-size: 24px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+/* line 52, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/comments.sass */
+.comment-container .comment-info .comment-author p {
+  display: inline-flex;
+  font-size: 16px;
+  margin: 0;
+  vertical-align: middle;
+}
+/* line 58, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/comments.sass */
+.comment-container .comment-info a, .comment-container .comment-info a:hover, .comment-container .comment-info a:active, .comment-container .comment-info a:visited {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #dd550c;
+  text-decoration: none;
+  padding: 5px 0px;
+}
+
+/* line 65, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/comments.sass */
+textarea {
+  width: 100%;
+  height: 100px;
+}
+/* line 5, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper {
+  width: 1200px;
+  overflow: hidden;
+  clear: both;
+  margin: 20px auto;
+}
+/* line 11, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .start-discussion-button, .discussion-wrapper .start-discussion-button:visited {
+  display: block;
+  float: left;
+  width: 150px;
+  height: 16px;
+  margin: 20px 0px;
+  text-align: center;
+  padding: 14px 5px 16px 5px;
+  background: #03244d;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+/* line 26, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .start-discussion-button:hover, .discussion-wrapper .start-discussion-button:active {
+  background: #496e9c;
+}
+/* line 29, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-sort {
+  margin: 20px 0;
+  width: 216px;
+  height: 42px;
+  border: 2px solid #03244d;
+  float: right;
+}
+/* line 36, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-sort #sort-button {
+  float: right;
+  color: white;
+  display: block;
+  height: 42px;
+  width: 42px;
+  border-left: 2px solid #03244d;
+  background: #03244d;
+  font-size: 36px;
+  text-align: center;
+}
+/* line 47, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-sort .sort-list {
+  display: block;
+  padding: 0;
+  margin: 0;
+  float: left;
+  height: 42px;
+  width: 172px;
+  background: white;
+}
+/* line 56, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-sort .sort-list .sort-item.current {
+  list-style: none;
+}
+/* line 59, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-sort .sort-list .sort-item.current a, .discussion-wrapper .discussion-sort .sort-list .sort-item.current a:visited, .discussion-wrapper .discussion-sort .sort-list .sort-item.current a:hover, .discussion-wrapper .discussion-sort .sort-list .sort-item.current a:active {
+  display: block;
+  width: 142px;
+  height: 32px;
+  color: #03244d;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 12px 10px 0 10px;
+  text-decoration: none;
+  color: #03244d;
+}
+/* line 71, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-sort .sort-list .sort-item.other {
+  list-style: none;
+}
+/* line 74, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-sort .sort-list .sort-item.other a, .discussion-wrapper .discussion-sort .sort-list .sort-item.other a:visited {
+  width: 198px;
+  margin-left: -2px;
+  display: none;
+  background: #03244d;
+  border: 2px solid #03244d;
+  height: 22px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 10px 10px;
+  text-decoration: none;
+  z-index: 9;
+}
+/* line 89, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-sort .sort-list .sort-item.other a:hover, .discussion-wrapper .discussion-sort .sort-list .sort-item.other a:active {
+  background: #496e9c;
+}
+/* line 92, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-sort .sort-list .sort-item.other.open {
+  list-style: none;
+}
+/* line 95, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-sort .sort-list .sort-item.other.open a, .discussion-wrapper .discussion-sort .sort-list .sort-item.other.open a:visited {
+  width: 198px;
+  margin-left: -2px;
+  display: block;
+  background: #03244d;
+  border: 2px solid #03244d;
+  height: 22px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 10px 10px;
+  text-decoration: none;
+  z-index: 9;
+}
+/* line 110, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-sort .sort-list .sort-item.other.open a:hover, .discussion-wrapper .discussion-sort .sort-list .sort-item.other.open a:active {
+  background: #496e9c;
+}
+/* line 114, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-container {
+  width: 100%;
+  clear: both;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+/* line 120, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-container .vote-buttons {
+  height: 90px;
+  width: 50px;
+  display: block;
+  float: left;
+  margin: 58px 0 0 0;
+}
+/* line 127, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-container .vote-buttons .vote-plus {
+  display: block;
+  width: 50px;
+}
+/* line 131, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-container .vote-buttons .vote-plus a, .discussion-wrapper .discussion-container .vote-buttons .vote-plus a:active, .discussion-wrapper .discussion-container .vote-buttons .vote-plus a:visited, .discussion-wrapper .discussion-container .vote-buttons .vote-plus a:hover {
+  text-decoration: none;
+  color: white;
+}
+/* line 135, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-container .vote-buttons .vote-plus a i, .discussion-wrapper .discussion-container .vote-buttons .vote-plus a:active i, .discussion-wrapper .discussion-container .vote-buttons .vote-plus a:visited i, .discussion-wrapper .discussion-container .vote-buttons .vote-plus a:hover i {
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+  background: #dd550c;
+}
+/* line 141, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-container .vote-buttons .vote-plus p {
+  color: #03244d;
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+  padding: 5px;
+  margin: 0;
+  font-size: 20px;
+  border-left: 2px solid #dd550c;
+}
+/* line 152, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-container .vote-buttons .vote-minus {
+  display: block;
+  width: 50px;
+}
+/* line 156, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-container .vote-buttons .vote-minus a, .discussion-wrapper .discussion-container .vote-buttons .vote-minus a:active, .discussion-wrapper .discussion-container .vote-buttons .vote-minus a:visited, .discussion-wrapper .discussion-container .vote-buttons .vote-minus a:hover {
+  text-decoration: none;
+  color: white;
+}
+/* line 160, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-container .vote-buttons .vote-minus a i, .discussion-wrapper .discussion-container .vote-buttons .vote-minus a:active i, .discussion-wrapper .discussion-container .vote-buttons .vote-minus a:visited i, .discussion-wrapper .discussion-container .vote-buttons .vote-minus a:hover i {
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+  background: #dd550c;
+}
+/* line 166, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-container .discussion-tabs {
+  height: 40px;
+}
+/* line 169, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-container .discussion-tabs .category-tab {
+  height: 40px;
+  overflow: hidden;
+  float: left;
+  background: #dd550c;
+  color: white;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+/* line 179, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-container .discussion-tabs .category-tab i {
+  display: inline-flex;
+  vertical-align: middle;
+  margin: 10px;
+}
+/* line 184, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-container .discussion-tabs .category-tab p {
+  display: inline-flex;
+  vertical-align: middle;
+  margin: 10px 15px 10px 0;
+}
+/* line 189, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-container .discussion-tabs .sharing-buttons {
+  height: 40px;
+  display: inline;
+  float: right;
+}
+/* line 194, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-container .discussion-tabs .sharing-buttons .tweet-button {
+  display: inline;
+  float: right;
+  background: #55acee;
+  width: 50px;
+  height: 40px;
+}
+/* line 201, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-container .discussion-tabs .sharing-buttons .tweet-button img {
+  height: 20px;
+  margin: 10px 12px;
+}
+/* line 205, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-container .discussion-tabs .sharing-buttons .share-button {
+  display: inline;
+  float: right;
+  background: #3b5998;
+  width: 50px;
+  height: 40px;
+}
+/* line 212, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-container .discussion-tabs .sharing-buttons .share-button img {
+  height: 20px;
+  margin: 10px 15px;
+}
+/* line 216, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-container .discussion-tabs .sharing-buttons .plus-button {
+  display: inline;
+  float: right;
+  background: #DC4E41;
+  width: 50px;
+  height: 40px;
+}
+/* line 223, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-container .discussion-tabs .sharing-buttons .plus-button img {
+  height: 20px;
+  margin: 10px 9px;
+}
+/* line 227, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-container .discussion-content {
+  margin: 0 0 0 50px;
+  padding: 20px;
+  border: 2px solid #dd550c;
+  overflow: hidden;
+}
+/* line 233, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-container .discussion-content .discussion-title {
+  margin: 0;
+}
+/* line 236, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-container .discussion-content .discussion-title a, .discussion-wrapper .discussion-container .discussion-content .discussion-title a:active, .discussion-wrapper .discussion-container .discussion-content .discussion-title a:visited, .discussion-wrapper .discussion-container .discussion-content .discussion-title a:hover {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  color: #03244d;
+}
+/* line 243, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-container .discussion-content .discussion-info {
+  display: inline;
+  float: left;
+  height: 24px;
+  width: 100%;
+  padding-top: 20px;
+  overflow: hidden;
+}
+/* line 252, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-container .discussion-content .discussion-info .discussion-creator {
+  display: inline;
+  float: left;
+  height: 24px;
+  margin: 0;
+}
+/* line 258, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-container .discussion-content .discussion-info .discussion-creator i {
+  display: inline-flex;
+  vertical-align: middle;
+  margin: 0 5px 0 0;
+}
+/* line 263, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-container .discussion-content .discussion-info .discussion-creator p {
+  display: inline-flex;
+  vertical-align: middle;
+  margin: 0 15px 0 0;
+}
+/* line 268, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-container .discussion-content .discussion-info .discussion-date {
+  display: inline;
+  float: left;
+  height: 24px;
+  margin: 0;
+}
+/* line 274, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-container .discussion-content .discussion-info .discussion-date i {
+  display: inline-flex;
+  vertical-align: middle;
+  margin: 0 5px 0 0;
+}
+/* line 279, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-container .discussion-content .discussion-info .discussion-date p {
+  display: inline-flex;
+  vertical-align: middle;
+  margin: 0 15px 0 0;
+}
+/* line 284, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-container .discussion-content .discussion-info a, .discussion-wrapper .discussion-container .discussion-content .discussion-info a:hover, .discussion-wrapper .discussion-container .discussion-content .discussion-info a:visited, .discussion-wrapper .discussion-container .discussion-content .discussion-info a:active {
+  color: #dd550c;
+  text-decoration: none;
+}
+/* line 288, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-container .discussion-content .discussion-info .discussion-reply {
+  display: inline;
+  float: right;
+  height: 24px;
+  margin: 0;
+}
+/* line 294, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-container .discussion-content .discussion-info .discussion-reply i {
+  display: inline-flex;
+  vertical-align: middle;
+  margin: 0 5px 0 0;
+}
+/* line 299, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-container .discussion-content .discussion-info .discussion-reply p {
+  display: inline-flex;
+  vertical-align: middle;
+  margin: 0;
+}
+
+@media screen and (max-width: 1220px) {
+  /* line 305, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper {
+    width: 100%;
+    margin: 0;
+  }
+  /* line 309, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .start-discussion-button, .discussion-wrapper .start-discussion-button:visited {
+    margin: 20px 20px;
+  }
+  /* line 312, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-sort {
+    margin: 20px 20px;
+  }
+  /* line 316, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-sort .sort-list .sort-item.other.open a, .discussion-wrapper .discussion-sort .sort-list .sort-item.other.open a:visited {
+    width: 200px;
+    border: none;
+  }
+  /* line 321, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-container {
+    width: initial;
+    margin: 0 20px 20px 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* line 326, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper {
+    width: 100%;
+    margin: 0;
+  }
+  /* line 330, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .start-discussion-button, .discussion-wrapper .start-discussion-button:visited {
+    width: 112.5px;
+    height: 12px;
+    margin: 10px 0px 10px 10px;
+    text-align: center;
+    padding: 10.5px 3.75px 12px 3.75px;
+    font-size: 12px;
+  }
+  /* line 338, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-sort {
+    margin: 10px 10px;
+    width: 162px;
+    height: 31.5px;
+  }
+  /* line 343, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-sort #sort-button {
+    height: 31px;
+    width: 31px;
+    font-size: 27px;
+    border-bottom: 2px solid #03244d;
+  }
+  /* line 349, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-sort .sort-list {
+    height: 31.5px;
+    width: 129px;
+  }
+  /* line 354, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-sort .sort-list .sort-item.current a, .discussion-wrapper .discussion-sort .sort-list .sort-item.current a:visited, .discussion-wrapper .discussion-sort .sort-list .sort-item.current a:hover, .discussion-wrapper .discussion-sort .sort-list .sort-item.current a:active {
+    width: 106.5px;
+    height: 24px;
+    font-size: 10.5px;
+    padding: 9px 7.5px 0 7.5px;
+  }
+  /* line 361, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-sort .sort-list .sort-item.other.open a, .discussion-wrapper .discussion-sort .sort-list .sort-item.other.open a:visited {
+    width: 151px;
+    height: 16.5px;
+    font-size: 10.5px;
+    padding: 7.5px 7.5px;
+  }
+  /* line 367, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-container {
+    width: initial;
+    overflow: initial;
+    margin: 0 10px 10px 10px;
+  }
+  /* line 372, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-container .vote-buttons {
+    height: 90px;
+    width: 37.5px;
+    margin: 50px 0 0 0;
+  }
+  /* line 377, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-container .vote-buttons .vote-plus {
+    width: 37.5px;
+  }
+  /* line 380, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-container .vote-buttons .vote-plus p {
+    font-size: 15px;
+  }
+  /* line 384, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-container .vote-buttons .vote-minus {
+    width: 37.5px;
+  }
+  /* line 387, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-container .discussion-tabs {
+    height: 30px;
+  }
+  /* line 390, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-container .discussion-tabs .category-tab {
+    height: 30px;
+    font-size: 15px;
+    max-width: 140px;
+    overflow: ellipsis;
+    word-break: nowrap;
+    white-space: none;
+  }
+  /* line 398, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-container .discussion-tabs .category-tab i {
+    margin: 5px;
+  }
+  /* line 401, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-container .discussion-tabs .category-tab p {
+    margin: 5px 10px 5px 0;
+  }
+  /* line 404, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-container .discussion-tabs .sharing-buttons {
+    height: 30px;
+  }
+  /* line 407, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-container .discussion-tabs .sharing-buttons .tweet-button {
+    width: 37.5px;
+    height: 30px;
+  }
+  /* line 411, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-container .discussion-tabs .sharing-buttons .tweet-button img {
+    height: 15px;
+    margin: 7.5px 9px;
+  }
+  /* line 415, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-container .discussion-tabs .sharing-buttons .share-button {
+    width: 37.5px;
+    height: 30px;
+  }
+  /* line 419, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-container .discussion-tabs .sharing-buttons .share-button img {
+    height: 15px;
+    margin: 7.5px 11.25px;
+  }
+  /* line 423, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-container .discussion-tabs .sharing-buttons .plus-button {
+    width: 37.5px;
+    height: 30px;
+  }
+  /* line 427, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-container .discussion-tabs .sharing-buttons .plus-button img {
+    height: 15px;
+    margin: 7.5px 6.75px;
+  }
+  /* line 431, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-container .discussion-content {
+    margin: 0 0 0 37.5px;
+    padding: 15px;
+  }
+  /* line 436, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-container .discussion-content .discussion-title a, .discussion-wrapper .discussion-container .discussion-content .discussion-title a:active, .discussion-wrapper .discussion-container .discussion-content .discussion-title a:visited, .discussion-wrapper .discussion-container .discussion-content .discussion-title a:hover {
+    font-size: 18px;
+  }
+  /* line 439, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-container .discussion-content .discussion-info {
+    height: initial;
+    padding-top: 15px;
+  }
+  /* line 443, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-container .discussion-content .discussion-info .discussion-creator {
+    height: 18px;
+  }
+  /* line 446, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-container .discussion-content .discussion-info .discussion-creator i {
+    margin: 0 3.75px 0 0;
+  }
+  /* line 449, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-container .discussion-content .discussion-info .discussion-creator p {
+    margin: 0 11.25px 0 0;
+  }
+  /* line 452, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-container .discussion-content .discussion-info .discussion-date {
+    height: 18px;
+    clear: both;
+    margin-top: 10px;
+  }
+  /* line 457, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-container .discussion-content .discussion-info .discussion-date i {
+    margin: 0 3.75px 0 0;
+  }
+  /* line 460, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-container .discussion-content .discussion-info .discussion-date p {
+    margin: 0 11.25px 0 0;
+  }
+  /* line 463, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-container .discussion-content .discussion-info .discussion-reply {
+    height: 18px;
+    float: left;
+    clear: both;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  /* line 470, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-container .discussion-content .discussion-info .discussion-reply i {
+    margin: 0 3.75px 0 0;
+  }
+}
+/* line 473, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper {
+  width: 900px;
+  margin: 20px auto;
+  clear: both;
+}
+/* line 479, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-title a, .discussion-wrapper .discussion-title a:hover, .discussion-wrapper .discussion-title a:visited, .discussion-wrapper .discussion-title a:active {
+  color: #dd550c;
+  font-size: 36px;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+/* line 486, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-info-view {
+  display: inline-block;
+  float: left;
+  height: 30px;
+  overflow: hidden;
+}
+/* line 492, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-info-view .discussion-creator {
+  display: inline;
+  float: left;
+  height: 30px;
+  margin-right: 20px;
+}
+/* line 498, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-info-view .discussion-creator i {
+  display: inline-flex;
+  font-size: 30px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+/* line 504, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-info-view .discussion-creator p {
+  display: inline-flex;
+  font-size: 18px;
+  padding: 4.5px 0;
+  margin: 0;
+  vertical-align: middle;
+}
+/* line 511, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-info-view .discussion-date {
+  display: inline;
+  float: left;
+  height: 30px;
+  margin-right: 20px;
+}
+/* line 517, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-info-view .discussion-date i {
+  display: inline-flex;
+  font-size: 30px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+/* line 523, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-info-view .discussion-date p {
+  display: inline-flex;
+  font-size: 18px;
+  padding: 4.5px 0;
+  margin: 0;
+  vertical-align: middle;
+}
+/* line 530, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-info-view .discussion-category {
+  display: inline;
+  float: left;
+  height: 30px;
+  margin-right: 20px;
+}
+/* line 536, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-info-view .discussion-category i {
+  display: inline-flex;
+  font-size: 30px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+/* line 542, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-info-view .discussion-category p {
+  display: inline-flex;
+  font-size: 18px;
+  padding: 4.5px 0;
+  margin: 0;
+  vertical-align: middle;
+}
+/* line 549, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-info-view a, .discussion-wrapper .discussion-info-view a:visited, .discussion-wrapper .discussion-info-view a:hover, .discussion-wrapper .discussion-info-view a:active {
+  display: inline-block;
+  font-size: 14px;
+  text-decoration: none;
+  padding-top: 8px;
+  color: #dd550c;
+}
+/* line 556, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .sharing-buttons-view {
+  height: 30px;
+  float: left;
+  margin: 20px 0px;
+  clear: both;
+}
+/* line 562, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .sharing-buttons-view .tweet-button {
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  background: #55acee;
+  overflow: hidden;
+}
+/* line 569, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .sharing-buttons-view .tweet-button img {
+  height: 20px;
+  margin: 5px 7px;
+  float: left;
+  display: inline-flex;
+}
+/* line 575, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .sharing-buttons-view .tweet-button p {
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  float: left;
+  margin: 4px 5px;
+}
+/* line 583, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .sharing-buttons-view .share-button {
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  background: #3b5998;
+  overflow: hidden;
+}
+/* line 590, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .sharing-buttons-view .share-button img {
+  height: 20px;
+  margin: 5px 7px;
+  float: left;
+  display: inline-flex;
+}
+/* line 596, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .sharing-buttons-view .share-button p {
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  float: left;
+  margin: 4px 5px;
+}
+/* line 603, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .sharing-buttons-view .plus-button {
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  background: #DC4E41;
+  overflow: hidden;
+}
+/* line 610, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .sharing-buttons-view .plus-button img {
+  height: 20px;
+  margin: 5px 5px;
+  float: left;
+  display: inline-flex;
+}
+/* line 616, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .sharing-buttons-view .plus-button p {
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  float: left;
+  margin: 4px 5px;
+}
+/* line 623, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper hr {
+  border: 2px solid #dd550c;
+  clear: both;
+}
+/* line 627, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-ad {
+  margin: 20px auto;
+  width: 728px;
+  height: 90px;
+}
+/* line 632, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-content {
+  margin: 20px 0px;
+}
+/* line 635, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-content h1 {
+  font-size: 28px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #03244d;
+}
+/* line 642, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-content h2 {
+  font-size: 26px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #03244d;
+}
+/* line 649, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-content h3 {
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #03244d;
+}
+/* line 656, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-content h4 {
+  font-size: 22px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #03244d;
+}
+/* line 663, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-content h5 {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #03244d;
+}
+/* line 670, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-content h6 {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #03244d;
+}
+/* line 677, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-content p {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Open Sans", sans-serif;
+  margin: 10px 0;
+  color: #000000;
+}
+/* line 684, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-content a, .discussion-wrapper .discussion-content a:active, .discussion-wrapper .discussion-content a:hover, .discussion-wrapper .discussion-content a:visited {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Open Sans", sans-serif;
+  margin: 10px 0;
+  color: #dd550c;
+  text-decoration: none;
+}
+/* line 692, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-content ul {
+  margin: 10px 10px 20px 20px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+/* line 698, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .discussion-content ol {
+  margin: 10px 10px 20px 20px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+/* line 704, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .comment-count {
+  font-size: 20px;
+  color: #03244d;
+  font-family: "Roboto", sans-serif;
+  margin: 10px 0;
+}
+/* line 710, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .add-comment {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #03244d;
+  margin: 10px 0;
+}
+/* line 716, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .comment-sign-in {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  color: #000000;
+  margin: 10px 0;
+}
+/* line 722, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.discussion-wrapper .comment-sign-in a, .discussion-wrapper .comment-sign-in a:visited, .discussion-wrapper .comment-sign-in a:hover, .discussion-wrapper .comment-sign-in a:active {
+  color: #dd550c;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 920px) {
+  /* line 728, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper {
+    width: 90%;
+  }
+  /* line 731, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .dicsussion-title {
+    font-size: 28px;
+  }
+  /* line 734, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .dicussion-info {
+    height: initial;
+  }
+  /* line 736, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .dicussion-info .discussion-date {
+    clear: both;
+  }
+  /* line 741, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .sharing-buttons .tweet-button {
+    width: 90px;
+  }
+  /* line 744, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .sharing-buttons .tweet-button img {
+    height: 18px;
+    margin: 5px;
+  }
+  /* line 748, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .sharing-buttons .tweet-button p {
+    font-size: 14px;
+    margin: 4.5px 5px;
+  }
+  /* line 753, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .sharing-buttons .share-button {
+    width: 90px;
+  }
+  /* line 756, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .sharing-buttons .share-button img {
+    height: 18px;
+    margin: 5px;
+  }
+  /* line 760, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .sharing-buttons .share-button p {
+    font-size: 14px;
+    margin: 4.5px 5px;
+  }
+  /* line 764, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .sharing-buttons .plus-button {
+    width: 90px;
+  }
+  /* line 767, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .sharing-buttons .plus-button img {
+    height: 18px;
+    margin: 5px;
+  }
+  /* line 771, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .sharing-buttons .plus-button p {
+    font-size: 14px;
+    margin: 4.5px 5px;
+  }
+  /* line 775, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .discussion-wrapper .discussion-ad {
+    width: 111%;
+    height: initial;
+    min-height: 90px;
+  }
+}
+/* line 780, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.new-discussion-wrapper {
+  width: 900px;
+  clear: both;
+  margin: 20px auto;
+}
+/* line 785, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.new-discussion-wrapper .new-discussion-title {
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  color: #03244d;
+  margin: 20px 0;
+}
+
+/* line 791, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.edit-discussion-wrapper {
+  width: 900px;
+  clear: both;
+  margin: 20px auto;
+}
+/* line 796, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.edit-discussion-wrapper .new-discussion-title {
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  color: #03244d;
+  margin: 20px 0;
+}
+
+/* line 802, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+label {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #03244d;
+  margin: 10px 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/* line 810, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.help-text {
+  width: 90%;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: black;
+  margin: 10px 0;
+}
+/* line 817, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.help-text a, .help-text a:hover, .help-text a:visited, .help-text a:active {
+  color: #dd550c;
+  text-decoration: none;
+}
+
+/* line 822, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.title-field input {
+  border: 2px solid #dd550c;
+  height: 30px;
+  width: 90%;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+
+/* line 832, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.link-field input {
+  border: 2px solid #dd550c;
+  height: 30px;
+  width: 90%;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+
+/* line 842, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.content-field textarea {
+  border: 2px solid #dd550c;
+  height: 300px;
+  width: 90%;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 852, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.category-field select {
+  border: 2px solid #dd550c;
+  width: 200px;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  height: 40px;
+  background: white;
+  color: black;
+  margin-bottom: 10px;
+}
+
+/* line 864, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+.submit-field input[type="submit"] {
+  width: 200px;
+  height: 40px;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  background: #dd550c;
+  color: white;
+  border: 2px solid #dd550c;
+  margin: 20px 0;
+}
+
+@media screen and (max-width: 920px) {
+  /* line 875, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .edit-discussion-wrapper {
+    width: 95%;
+    margin-left: 10px;
+  }
+
+  /* line 879, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/discussions.sass */
+  .new-discussion-wrapper {
+    width: 95%;
+    margin-left: 10px;
+  }
+}
+/* line 5, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/pages.sass */
+.contact-wrapper {
+  width: 900px;
+  margin: 20px auto;
+  clear: both;
+}
+/* line 10, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/pages.sass */
+.contact-wrapper .contact-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  color: #03244d;
+  margin: 20px 10px 40px;
+}
+/* line 16, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/pages.sass */
+.contact-wrapper .contact-subtitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  color: #03244d;
+  margin: 20px 10px;
+}
+/* line 22, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/pages.sass */
+.contact-wrapper .contact-contributer {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px;
+}
+/* line 28, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/pages.sass */
+.contact-wrapper p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: black;
+  margin: 10px;
+}
+/* line 34, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/pages.sass */
+.contact-wrapper a, .contact-wrapper a:hover, .contact-wrapper a:visited, .contact-wrapper a:active {
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+  color: #dd550c;
+}
+/* line 39, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/pages.sass */
+.contact-wrapper .contact-note {
+  font-style: italic;
+  margin: 30px 10px;
+  color: #999999;
+}
+
+@media screen and (max-width: 920px) {
+  /* line 45, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/pages.sass */
+  .contact-wrapper {
+    width: 100%;
+  }
+}
+/* line 48, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/pages.sass */
+table {
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  border: 4px solid #dd550c;
+}
+/* line 54, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/pages.sass */
+table thead {
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  border: 4px solid #dd550c;
+  text-align: left;
+}
+/* line 61, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/pages.sass */
+table thead th {
+  padding: 10px;
+  border: 4px solid #dd550c;
+}
+/* line 67, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/pages.sass */
+table tbody tr:hover {
+  background: #cccccc;
+}
+/* line 69, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/pages.sass */
+table tbody tr td {
+  padding: 5px 10px;
+  border: 2px solid #dd550c;
+}
+/* line 73, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/pages.sass */
+table tbody tr td a, table tbody tr td a:hover, table tbody tr td a:visited, table tbody tr td a:active {
+  text-decoration: none;
+  color: #dd550c;
+}
+
+/* line 77, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/pages.sass */
+.stats-table-title {
+  margin: 10px 0 5px;
+}
+
+/* line 80, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/pages.sass */
+.stats {
+  width: 100%;
+  overflow: scroll;
+}
+
+/* line 84, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/pages.sass */
+.stats-table {
+  width: 900px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  border: 2px solid #dd550c;
+}
+/* line 90, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/pages.sass */
+.stats-table thead {
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  border: none;
+  text-align: center;
+}
+/* line 97, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/pages.sass */
+.stats-table thead th {
+  border: 2px solid #dd550c;
+  padding: 5px;
+}
+/* line 100, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/pages.sass */
+.stats-table thead th:hover {
+  background: #dd550c;
+  cursor: default;
+}
+/* line 106, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/pages.sass */
+.stats-table tbody tr:hover {
+  background: #cccccc;
+}
+/* line 108, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/pages.sass */
+.stats-table tbody tr td {
+  padding: 5px;
+  text-align: right;
+  border: 1px solid #dd550c;
+}
+/* line 112, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/pages.sass */
+.stats-table tbody tr td.alt {
+  text-align: left;
+}
+/* line 5, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.blog-container {
+  width: 1872px;
+  margin: 10px auto;
+  clear: both;
+}
+
+/* line 10, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-container {
+  display: inline-block;
+  float: left;
+  width: 624px;
+}
+/* line 15, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-container .post-tabs {
+  margin: 10px 10px 0 10px;
+  height: 40px;
+}
+/* line 19, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-container .post-tabs .category-tab {
+  height: 40px;
+  overflow: hidden;
+  float: left;
+  background: #dd550c;
+  color: white;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+/* line 29, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-container .post-tabs .category-tab i {
+  display: inline-flex;
+  vertical-align: middle;
+  margin: 10px;
+}
+/* line 34, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-container .post-tabs .category-tab p {
+  display: inline-flex;
+  vertical-align: middle;
+  margin: 10px 15px 10px 0;
+}
+/* line 39, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-container .post-tabs .sharing-buttons {
+  height: 40px;
+  display: inline;
+  float: right;
+}
+/* line 44, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-container .post-tabs .sharing-buttons .tweet-button {
+  display: inline;
+  float: right;
+  background: #55acee;
+  width: 50px;
+  height: 40px;
+}
+/* line 51, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-container .post-tabs .sharing-buttons .tweet-button img {
+  height: 20px;
+  margin: 10px 12px;
+}
+/* line 55, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-container .post-tabs .sharing-buttons .share-button {
+  display: inline;
+  float: right;
+  background: #3b5998;
+  width: 50px;
+  height: 40px;
+}
+/* line 62, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-container .post-tabs .sharing-buttons .share-button img {
+  height: 20px;
+  margin: 10px 15px;
+}
+/* line 66, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-container .post-tabs .sharing-buttons .plus-button {
+  display: inline;
+  float: right;
+  background: #DC4E41;
+  width: 50px;
+  height: 40px;
+}
+/* line 73, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-container .post-tabs .sharing-buttons .plus-button img {
+  height: 20px;
+  margin: 10px 9px;
+}
+/* line 77, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-container .post-content {
+  margin: 0px 10px 10px 10px;
+  padding: 20px;
+  border: 2px solid #dd550c;
+}
+/* line 82, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-container .post-content .post-title {
+  font-family: "Roboto", sans-serif;
+  width: 560px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 20px;
+  text-decoration: none;
+  color: #03244d;
+  margin: 0 0 5px 0;
+}
+/* line 93, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-container .post-content .post-title a, .post-container .post-content .post-title a:visited, .post-container .post-content .post-title a:hover, .post-container .post-content .post-title a:active {
+  text-decoration: none;
+  color: #03244d;
+}
+/* line 97, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-container .post-content .post-image {
+  width: 100%;
+  margin: 5px 0;
+}
+/* line 101, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-container .post-content .post-info {
+  margin: 5px 0 0 0;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+}
+/* line 107, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-container .post-content .post-info .post-author {
+  display: inline;
+  float: left;
+  height: 24px;
+  margin: 0;
+}
+/* line 113, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-container .post-content .post-info .post-author i {
+  display: inline-flex;
+  vertical-align: middle;
+  margin: 0 5px 0 0;
+}
+/* line 118, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-container .post-content .post-info .post-author p {
+  display: inline-flex;
+  vertical-align: middle;
+  margin: 0 15px 0 0;
+}
+/* line 123, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-container .post-content .post-info .post-date {
+  display: inline;
+  float: left;
+  height: 24px;
+  margin: 0;
+}
+/* line 129, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-container .post-content .post-info .post-date i {
+  display: inline-flex;
+  vertical-align: middle;
+  margin: 0 5px 0 0;
+}
+/* line 134, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-container .post-content .post-info .post-date p {
+  display: inline-flex;
+  vertical-align: middle;
+  margin: 0 15px 0 0;
+}
+/* line 139, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-container .post-content .post-info .post-comments {
+  display: inline;
+  float: right;
+  height: 24px;
+  margin: 0;
+}
+/* line 145, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-container .post-content .post-info .post-comments i {
+  display: inline-flex;
+  vertical-align: middle;
+  margin: 0 5px 0 0;
+}
+/* line 150, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-container .post-content .post-info .post-comments p {
+  display: inline-flex;
+  vertical-align: middle;
+  margin: 0;
+}
+
+/* line 155, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.ad-blog-home-bottom {
+  clear: both;
+  width: 970px;
+  height: 90px;
+  padding: 10px 10px;
+  margin: 0 auto;
+}
+
+/* line 162, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.pagination {
+  padding: 10px;
+  text-align: center;
+  background: white;
+  clear: both;
+  cursor: default;
+  /* self-clearing method: */
+}
+/* line 168, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.pagination a, .pagination span, .pagination em {
+  padding: 10px 15px;
+  display: block;
+  float: left;
+  margin-right: -2px;
+}
+/* line 173, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.pagination .disabled {
+  color: #999999;
+  border: 2px solid #dd550c;
+}
+/* line 176, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.pagination .current {
+  font-style: normal;
+  font-weight: bold;
+  background: #dd550c;
+  color: white;
+  border: 2px solid #dd550c;
+}
+/* line 182, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.pagination a {
+  text-decoration: none;
+  color: #dd550c;
+  border: 2px solid #dd550c;
+}
+/* line 186, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.pagination a:hover, .pagination a:focus {
+  color: #f68026;
+  border-color: #f68026;
+}
+/* line 190, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.pagination:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* line 196, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+* html .pagination {
+  height: 1%;
+}
+/* line 198, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+*:first-child + html .pagination {
+  overflow: hidden;
+}
+
+/* line 203, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-suggested .suggested-heading {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  color: #03244d;
+  margin: 10px;
+}
+/* line 210, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-suggested .suggested-title a:hover, .post-suggested .suggested-title a:visited, .post-suggested .suggested-title a:active, .post-suggested .suggested-title a {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  color: #03244d;
+  margin: 5px 10px;
+  text-decoration: none;
+}
+/* line 217, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-suggested .suggested-date {
+  font-size: 16px;
+  color: #496e9c;
+  font-family: "Open Sans", sans-serif;
+  margin: 0px 10px 15px;
+}
+
+@media screen and (max-width: 1872px) {
+  /* line 224, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .blog-container {
+    width: 1248px;
+  }
+}
+@media screen and (max-width: 1248px) {
+  /* line 228, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .blog-container {
+    width: 624px;
+  }
+}
+@media screen and (max-width: 624px) {
+  /* line 232, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .blog-container {
+    width: 100%;
+  }
+
+  /* line 235, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-container {
+    width: 100%;
+    margin: 0;
+  }
+  /* line 239, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-container .post-tabs {
+    height: 30px;
+  }
+  /* line 242, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-container .post-tabs .category-tab {
+    height: 30px;
+    font-size: 15px;
+  }
+  /* line 246, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-container .post-tabs .category-tab i {
+    margin: 5px;
+  }
+  /* line 249, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-container .post-tabs .category-tab p {
+    margin: 5px 10px 5px 0;
+  }
+  /* line 252, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-container .post-tabs .sharing-buttons {
+    height: 30px;
+  }
+  /* line 255, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-container .post-tabs .sharing-buttons .tweet-button {
+    width: 37.5px;
+    height: 30px;
+  }
+  /* line 259, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-container .post-tabs .sharing-buttons .tweet-button img {
+    height: 15px;
+    margin: 7.5px 9px;
+  }
+  /* line 263, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-container .post-tabs .sharing-buttons .share-button {
+    width: 37.5px;
+    height: 30px;
+  }
+  /* line 267, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-container .post-tabs .sharing-buttons .share-button img {
+    height: 15px;
+    margin: 7.5px 11.25px;
+  }
+  /* line 271, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-container .post-tabs .sharing-buttons .plus-button {
+    width: 37.5px;
+    height: 30px;
+  }
+  /* line 275, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-container .post-tabs .sharing-buttons .plus-button img {
+    height: 15px;
+    margin: 7.5px 6.75px;
+  }
+  /* line 279, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-container .post-content {
+    padding: 10px;
+  }
+  /* line 282, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-container .post-content .post-title {
+    width: initial;
+    text-overflow: initial;
+    white-space: initial;
+  }
+  /* line 291, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-container .post-content .post-info .post-author i {
+    font-size: 18px;
+  }
+  /* line 294, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-container .post-content .post-info .post-author p {
+    margin: 0 11.25px 0 0;
+    font-size: 15px;
+  }
+  /* line 298, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-container .post-content .post-info .post-date {
+    clear: left;
+  }
+  /* line 301, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-container .post-content .post-info .post-date i {
+    font-size: 18px;
+  }
+  /* line 304, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-container .post-content .post-info .post-date p {
+    margin: 0 11.25px 0 0;
+    font-size: 15px;
+  }
+  /* line 310, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-container .post-content .post-info .post-comments i {
+    font-size: 18px;
+  }
+  /* line 313, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-container .post-content .post-info .post-comments p {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 970px) {
+  /* line 318, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .ad-blog-home-bottom {
+    width: 728px;
+  }
+}
+@media screen and (max-width: 728px) {
+  /* line 323, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .ad-blog-home-bottom {
+    width: 320px;
+    height: 100px;
+  }
+}
+/* line 327, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper {
+  width: 900px;
+  margin: 20px auto;
+  clear: both;
+}
+/* line 332, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .post-title {
+  color: #03244d;
+  font-size: 36px;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 20px;
+}
+/* line 338, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .post-info {
+  display: inline-block;
+  margin-bottom: 20px;
+  height: 30px;
+  overflow: hidden;
+}
+/* line 344, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .post-info .post-author {
+  display: inline;
+  float: left;
+  height: 30px;
+  margin-right: 20px;
+}
+/* line 350, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .post-info .post-author i {
+  display: inline-flex;
+  font-size: 30px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+/* line 356, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .post-info .post-author p {
+  display: inline-flex;
+  font-size: 18px;
+  padding: 4.5px 0;
+  margin: 0;
+  vertical-align: middle;
+}
+/* line 363, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .post-info .post-date {
+  display: inline;
+  float: left;
+  height: 30px;
+  margin-right: 20px;
+}
+/* line 369, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .post-info .post-date i {
+  display: inline-flex;
+  font-size: 30px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+/* line 375, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .post-info .post-date p {
+  display: inline-flex;
+  font-size: 18px;
+  padding: 4.5px 0;
+  margin: 0;
+  vertical-align: middle;
+}
+/* line 382, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .post-info .post-category {
+  display: inline;
+  float: left;
+  height: 30px;
+  margin-right: 20px;
+}
+/* line 388, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .post-info .post-category i {
+  display: inline-flex;
+  font-size: 30px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+/* line 394, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .post-info .post-category p {
+  display: inline-flex;
+  font-size: 18px;
+  padding: 4.5px 0;
+  margin: 0;
+  vertical-align: middle;
+}
+/* line 401, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .post-info a, .post-wrapper .post-info a:visited, .post-wrapper .post-info a:hover, .post-wrapper .post-info a:active {
+  display: inline-block;
+  font-size: 14px;
+  text-decoration: none;
+  padding-top: 8px;
+  color: #dd550c;
+}
+/* line 408, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .post-image {
+  width: 600px;
+  display: block;
+  margin: 0 auto;
+}
+/* line 413, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .sharing-buttons {
+  height: 30px;
+  float: left;
+  margin: 20px 0px;
+}
+/* line 418, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .sharing-buttons .tweet-button {
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  background: #55acee;
+  overflow: hidden;
+}
+/* line 425, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .sharing-buttons .tweet-button img {
+  height: 20px;
+  margin: 5px 7px;
+  float: left;
+  display: inline-flex;
+}
+/* line 431, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .sharing-buttons .tweet-button p {
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  float: left;
+  margin: 4px 5px;
+}
+/* line 439, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .sharing-buttons .share-button {
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  background: #3b5998;
+  overflow: hidden;
+}
+/* line 446, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .sharing-buttons .share-button img {
+  height: 20px;
+  margin: 5px 7px;
+  float: left;
+  display: inline-flex;
+}
+/* line 452, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .sharing-buttons .share-button p {
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  float: left;
+  margin: 4px 5px;
+}
+/* line 459, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .sharing-buttons .plus-button {
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  background: #DC4E41;
+  overflow: hidden;
+}
+/* line 466, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .sharing-buttons .plus-button img {
+  height: 20px;
+  margin: 5px 5px;
+  float: left;
+  display: inline-flex;
+}
+/* line 472, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .sharing-buttons .plus-button p {
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  float: left;
+  margin: 4px 5px;
+}
+/* line 479, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper hr {
+  border: 2px solid #dd550c;
+  clear: both;
+}
+/* line 483, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .post-ad-top {
+  margin: 20px auto;
+  width: 728px;
+  height: 90px;
+}
+/* line 488, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .post-content {
+  margin: 20px 0px;
+}
+/* line 491, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .post-content h1 {
+  font-size: 28px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #03244d;
+}
+/* line 498, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .post-content h2 {
+  font-size: 26px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #03244d;
+}
+/* line 505, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .post-content h3 {
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #03244d;
+}
+/* line 512, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .post-content h4 {
+  font-size: 22px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #03244d;
+}
+/* line 519, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .post-content h5 {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #03244d;
+}
+/* line 526, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .post-content h6 {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #03244d;
+}
+/* line 533, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .post-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Open Sans", sans-serif;
+  margin: 20px 0;
+  color: #000000;
+}
+/* line 540, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .post-content a, .post-wrapper .post-content a:active, .post-wrapper .post-content a:hover, .post-wrapper .post-content a:visited {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Open Sans", sans-serif;
+  margin: 10px 0;
+  color: #dd550c;
+  text-decoration: none;
+}
+/* line 548, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .post-content ul {
+  margin: 10px 10px 20px 20px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+/* line 554, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .post-content ol {
+  margin: 10px 10px 20px 20px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+/* line 560, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .post-ad-bottom {
+  margin: 20px auto;
+  width: 728px;
+  height: 90px;
+}
+/* line 565, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .comment-count {
+  font-size: 20px;
+  color: #03244d;
+  font-family: "Roboto", sans-serif;
+  margin: 10px 0;
+}
+/* line 571, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .add-comment {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #03244d;
+  margin: 10px 0;
+}
+/* line 577, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .comment-sign-in {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  color: #000000;
+}
+/* line 582, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-wrapper .comment-sign-in a, .post-wrapper .comment-sign-in a:visited, .post-wrapper .comment-sign-in a:hover, .post-wrapper .comment-sign-in a:active {
+  color: #dd550c;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 920px) {
+  /* line 588, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-wrapper {
+    width: 90%;
+  }
+  /* line 591, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-wrapper .post-title {
+    font-size: 28px;
+  }
+  /* line 594, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-wrapper .post-info {
+    height: initial;
+  }
+  /* line 596, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-wrapper .post-info .post-date {
+    clear: both;
+  }
+  /* line 599, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-wrapper .post-image {
+    width: 100%;
+  }
+  /* line 604, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-wrapper .sharing-buttons .tweet-button {
+    width: 90px;
+  }
+  /* line 607, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-wrapper .sharing-buttons .tweet-button img {
+    height: 18px;
+    margin: 5px;
+  }
+  /* line 611, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-wrapper .sharing-buttons .tweet-button p {
+    font-size: 14px;
+    margin: 4.5px 5px;
+  }
+  /* line 616, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-wrapper .sharing-buttons .share-button {
+    width: 90px;
+  }
+  /* line 619, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-wrapper .sharing-buttons .share-button img {
+    height: 18px;
+    margin: 5px;
+  }
+  /* line 623, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-wrapper .sharing-buttons .share-button p {
+    font-size: 14px;
+    margin: 4.5px 5px;
+  }
+  /* line 627, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-wrapper .sharing-buttons .plus-button {
+    width: 90px;
+  }
+  /* line 630, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-wrapper .sharing-buttons .plus-button img {
+    height: 18px;
+    margin: 5px;
+  }
+  /* line 634, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-wrapper .sharing-buttons .plus-button p {
+    font-size: 14px;
+    margin: 4.5px 5px;
+  }
+  /* line 638, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .post-wrapper .post-ad-bottom, .post-wrapper .post-ad-top {
+    width: 111%;
+    height: initial;
+    min-height: 90px;
+  }
+}
+/* line 643, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.new-post-wrapper {
+  width: 900px;
+  clear: both;
+  margin: 20px auto;
+}
+/* line 648, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.new-post-wrapper .new-post-title {
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  color: #03244d;
+  margin: 20px 0;
+}
+
+/* line 654, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.edit-post-wrapper {
+  width: 900px;
+  clear: both;
+  margin: 20px auto;
+}
+/* line 659, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.edit-post-wrapper .new-post-title {
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  color: #03244d;
+  margin: 20px 0;
+}
+
+/* line 665, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+label {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #03244d;
+  margin: 10px 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/* line 673, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.help-text {
+  width: 90%;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: black;
+  margin: 10px 0;
+}
+/* line 680, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.help-text a, .help-text a:hover, .help-text a:visited, .help-text a:active {
+  color: #dd550c;
+  text-decoration: none;
+}
+
+/* line 685, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.title-field input {
+  border: 2px solid #dd550c;
+  height: 30px;
+  width: 90%;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+
+/* line 695, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.description-field textarea {
+  border: 2px solid #dd550c;
+  height: 100px;
+  width: 90%;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 705, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.content-field textarea {
+  border: 2px solid #dd550c;
+  height: 300px;
+  width: 90%;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 715, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.category-field select {
+  border: 2px solid #dd550c;
+  width: 200px;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  height: 40px;
+  background: white;
+  color: black;
+  margin-bottom: 10px;
+}
+
+/* line 726, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.image-field {
+  margin-bottom: 20px;
+}
+
+/* line 730, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.publish-field input {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 20px;
+}
+
+/* line 736, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.submit-field input[type="submit"] {
+  width: 200px;
+  height: 40px;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  background: #dd550c;
+  color: white;
+  border: 2px solid #dd550c;
+  margin: 20px 0;
+}
+
+@media screen and (max-width: 920px) {
+  /* line 747, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .edit-post-wrapper {
+    width: 95%;
+    margin-left: 10px;
+  }
+
+  /* line 751, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+  .new-post-wrapper {
+    width: 95%;
+    margin-left: 10px;
+  }
+}
+/* line 755, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-panel-wrapper {
+  width: 95%;
+  margin: 20px auto;
+  clear: both;
+}
+/* line 760, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-panel-wrapper .post-panel-title {
+  color: #03244d;
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+}
+/* line 767, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-panel-wrapper .admin-links a, .post-panel-wrapper .admin-links a:visited {
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: white;
+  background: #dd550c;
+  border: 2px solid #dd550c;
+  text-decoration: none;
+  padding: 10px;
+  margin: 10px 0;
+}
+/* line 779, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-panel-wrapper .admin-links a:hover, .post-panel-wrapper .admin-links a:active {
+  background: #f68026;
+}
+/* line 782, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-panel-wrapper .post-panel-table {
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  border: 4px solid #dd550c;
+}
+/* line 788, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-panel-wrapper .post-panel-table thead {
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  border: 4px solid #dd550c;
+}
+/* line 794, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-panel-wrapper .post-panel-table thead td {
+  padding: 10px;
+  border: 4px solid #dd550c;
+}
+/* line 800, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-panel-wrapper .post-panel-table tbody tr:hover {
+  background: #cccccc;
+}
+/* line 802, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-panel-wrapper .post-panel-table tbody tr td {
+  padding: 5px 10px;
+  border: 2px solid #dd550c;
+}
+/* line 806, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/posts.sass */
+.post-panel-wrapper .post-panel-table tbody tr td a, .post-panel-wrapper .post-panel-table tbody tr td a:hover, .post-panel-wrapper .post-panel-table tbody tr td a:visited, .post-panel-wrapper .post-panel-table tbody tr td a:active {
+  text-decoration: none;
+  color: #dd550c;
+}
+/* line 5, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/replies.sass */
+.reply-container {
+  margin: 20px 0px;
+  background: #eeeeee;
+  border: 2px solid #cccccc;
+  border-radius: 10px;
+}
+/* line 11, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/replies.sass */
+.reply-container .reply-content {
+  margin: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+}
+/* line 17, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/replies.sass */
+.reply-container .reply-info {
+  display: inline-block;
+  margin: 0px 20px 20px 20px;
+  height: 24px;
+  overflow: hidden;
+}
+/* line 23, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/replies.sass */
+.reply-container .reply-info .reply-date {
+  display: inline;
+  float: left;
+  height: 24px;
+  margin-right: 20px;
+}
+/* line 29, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/replies.sass */
+.reply-container .reply-info .reply-date i {
+  display: inline-flex;
+  font-size: 24px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+/* line 35, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/replies.sass */
+.reply-container .reply-info .reply-date p {
+  display: inline-flex;
+  font-size: 16px;
+  margin: 0;
+  vertical-align: middle;
+}
+/* line 41, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/replies.sass */
+.reply-container .reply-info .reply-author {
+  display: inline;
+  float: left;
+  height: 24px;
+  margin-right: 20px;
+}
+/* line 47, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/replies.sass */
+.reply-container .reply-info .reply-author i {
+  display: inline-flex;
+  font-size: 24px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+/* line 53, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/replies.sass */
+.reply-container .reply-info .reply-author p {
+  display: inline-flex;
+  font-size: 16px;
+  margin: 0;
+  vertical-align: middle;
+}
+/* line 59, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/replies.sass */
+.reply-container .reply-info a, .reply-container .reply-info a:hover, .reply-container .reply-info a:active, .reply-container .reply-info a:visited {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #dd550c;
+  text-decoration: none;
+  padding: 5px 0px;
+}
+
+/* line 66, /Volumes/Macintosh HD/Google Drive/Websites/aujungletimes/app/assets/stylesheets/replies.sass */
+textarea {
+  width: 100%;
+  height: 100px;
+}
