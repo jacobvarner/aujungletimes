@@ -31,6 +31,9 @@ class PostsController < ApplicationController
 
 	def show
 		@post = Post.friendly.find(params[:id])
+		@idLow = @post.id - 4
+		@idHigh = @post.id + 4
+		@suggested = Post.where(publish: true, :id => @idLow..@idHigh).where.not(:id => @post.id).order('created_at DESC')
 	end
 
 	def edit
